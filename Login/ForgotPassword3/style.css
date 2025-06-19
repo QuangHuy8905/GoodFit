@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("background.jpg"); /* 👈 thay bằng tên ảnh nền thật */
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* 👈 làm mờ ảnh */
+  z-index: -1; /* 👈 nằm sau form */
+}
+
+
+.login-box {
+  width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px; /* 👈 Góc vuông */
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.fb {
+  border-color: black;
+  color: #888;
+}
+
+.gg {
+  border-color: black;
+  color: #888;
+}
+
+
+.register-text {
+  font-size: 13px;
+  margin: 15px 0 5px;
+}
+
+.register-text a {
+  text-decoration: none;
+  color: #4D5F81;
+}
+
+hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #ccc;
+}
+
+.or-divider span {
+  margin: 0 10px;
+  color: #888; /* chữ nhạt */
+  font-size: 13px;
+}
+
+.input-group {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  color: black; /* màu xám nhạt */
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;  /* chừa chỗ bên phải */
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%; /* 👈 nằm giữa chiều cao input */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+.toggle-password ion-icon {
+  font-size: 20px;
+}
+
+
+.forgot {
+  text-align: right;
+  font-size: 12px;
+  margin: 5px 0 15px;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: black;
+}
+
+.login-redirect {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #333;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.login-redirect a {
+  color: #4D5F81; /* xanh giống hình */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4D5F81;  /* hoặc màu xanh đậm hơn */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+
