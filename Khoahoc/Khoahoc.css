@@ -1,0 +1,253 @@
+/* form chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  background: #fff;
+  color: #000;
+  padding: 10px 50px;
+}
+/* thanh điều hướng */
+.navbar {
+  padding: 10px 10px; /* Thêm padding trên dưới cho thanh nav */
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  margin-left: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.login {
+  color: #4261e2;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('img/background.png') no-repeat center center/cover;
+}
+.logo img {
+  float: left;
+  width: 100px;  /* Điều chỉnh chiều rộng mong muốn của logo */
+  height: 20px;
+  margin-right: auto ; /* lệch hẵn về bên trái */
+  margin-left: 20px ; /* cách viền trái trang web 100px */
+}
+/* thanh tìm kiếm và tiêu đề */
+.trainer-section {
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #3b4b77;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px 40px 10px 40px;
+  border: 2px solid #3b4b77;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #3b4b77;
+}
+
+.trainer-list {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+/* KHÓA HỌC */
+.course {
+  width: 100%;
+  max-width: 370px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f4a72;
+  margin: 0 0 20px;
+}
+
+.course-content p {
+  font-size: 14px;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
+/* thanh điều hướng trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  border: none;
+  background: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.pagination button.active {
+  background-color: #3b4b77;
+  color: white;
+}
+/* footer */
+.footer {
+  background-color: #516386;
+  color: white;
+  padding: 40px 200px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.info-row i {
+  font-size: 18px;
+  margin-top: 4px;
+  color: white;
+  min-width: 20px;
+  text-align: center;
+}
+
+.label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.value {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.footess {
+  background-color: #000000; /* Màu nền đen */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px 0;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3); /* đổ bóng nhẹ phía dưới */
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footess-logo {
+  max-height: 40px;
+  object-fit: contain;
+}
