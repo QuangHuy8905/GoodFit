@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+header {
+  background: #fff;
+  color: #000;
+  padding: 10px 50px;
+}
+
+.navbar {
+  padding: 10px 10px; /* Thêm padding trên dưới cho thanh nav */
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  margin-left: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.login {
+  color: #4261e2;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('img/background.png') no-repeat center center/cover;
+}
+.logo img {
+  float: left;
+  width: 100px;  /* Điều chỉnh chiều rộng mong muốn của logo */
+  height: 20px;
+  margin-right: auto ; /* lệch hẵn về bên trái */
+  margin-left: 20px ; /* cách viền trái trang web 100px */
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  margin-right: auto; /* lệch hẵn về bên trái */
+  margin-left: 200px; /* cách viền trái trang web 100px */
+  text-align: left; /* căn chỉnh nội dung văn bản về bên trái */
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.hero-content p {
+  margin-top: 30px; /* tạo khoảng cách với dòng trên là 30px */
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.hero-content button {
+  margin-top: 35px; 
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #69708a;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px; /* bo góc với bán kính 10px */
+}
+
+.features {
+  display: flex; /* biến thành 1 flexbox cho phép các phần tử con có thể di chuyển */
+  justify-content: center; /* căn giữa các phần tử theo chiều ngang */
+  align-items: center; /* căn giữa các phần tử theo chiều dọc */
+  gap: 30px; /* tạo khoảng trống giữa các iteam */
+  font-family: sans-serif; /* cài font chữ */
+  padding: 30px; /* in đậm */
+}
+
+.feature {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* Căn giữa nội dung trong mỗi cột */
+  text-align: center;
+}
+.featuree {
+  display: flex;
+  align-items: baseline;
+  align-items: center;         /* căn giữa dọc */
+  gap: 8px;
+}
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #7789ab;
+}
+.stat-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 5px;
+}
+.stat-subtitle {
+  font-size: 12px;
+  color: #425374 ;
+  margin-top: 5px;
+}
+.divider {
+  width: 2px;
+  height: 60px;
+  background-color: #0e0e0e;
+  margin: 0 10px;
+}
+
+.container {
+  max-width: 1170px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.alivable {
+  color: #425374;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 15px;
+  color: #101010;
+  margin-bottom: 30px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+  .video-card {
+    width: 380px;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .video-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .video-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  .video-info {
+    padding: 10px 15px;
+  }
+
+  .video-info h4 {
+    margin: 0;
+    color: #3b3b3b;
+    font-size: 12px;
+  }
+
+  .video-info p {
+    margin: 5px 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    color: #4D5F81;
+    font-size: 16px;
+  }
+
+  .video-info small {
+    color: #888;
+    font-size: 13px;
+  }
+
+.banner {
+  position: relative;
+  width: 1170px;
+  height: 300px;
+  margin: 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url('img/backgroud2.png'); /* đường dẫn ảnh */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Lớp phủ tối mờ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.overlay p {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 300;
+  margin-top: 10px;
+}
+/* proprile huấn luyện viên */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3a4a66;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+.card-container {
+  max-width: 1170px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 20px;
+  width: 380px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 260px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #3f4a72;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 16px 0 8px;
+  text-transform: uppercase;
+}
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #444;
+}
+/* backgroud 2 */
+.banner1 {
+  position: relative;
+  width: 1170px;
+  height: 300px;
+  margin: 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url('img/backgroud 3.png'); /* đường dẫn ảnh */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 150px ;
+  justify-content: flex-start;
+}
+.Support {
+  color: white;
+  margin-left: 40px; /* đẩy chữ cách lề trái */
+  text-align: left;
+}
+
+.Support h1 {
+  font-size: 100px;
+  font-weight: bold;  
+  margin: 0;
+}
+
+.Support p {
+  font-size: 20px;
+  margin-top: 8px;
+}
+/* khóa học */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3b4d75;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.course-pro {
+  max-width: 1170px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+.course {
+  width: 100%;
+  max-width: 370px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f4a72;
+  margin: 0 0 20px;
+}
+
+.course-content p {
+  font-size: 14px;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
+/* đánh giá */
+.review-list {
+  display: flex;
+  justify-content: center;    /* canh giữa theo chiều ngang */
+  gap: 20px;                  /* khoảng cách giữa các thẻ */
+  flex-wrap: wrap;            /* cho responsive trên mobile */
+  padding: 20px;
+} 
+.review-card {
+  background: #dce1ec; /* Màu xám xanh dịu */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  width: 380px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: #2c3e50;
+}
+.stars {
+  color: #f39c12;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.review-card h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  color: #555;
+  font-size: 15px;
+}
+.footer {
+  background-color: #516386;
+  color: white;
+  padding: 40px 200px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.info-row i {
+  font-size: 18px;
+  margin-top: 4px;
+  color: white;
+  min-width: 20px;
+  text-align: center;
+}
+
+.label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.value {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.footess {
+  background-color: #000000; /* Màu nền đen */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px 0;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3); /* đổ bóng nhẹ phía dưới */
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footess-logo {
+  max-height: 40px;
+  object-fit: contain;
+}
