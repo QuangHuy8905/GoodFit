@@ -1,8 +1,8 @@
 html:
-  <header class="main-header">
+<header class="main-header">
     <div class="header-container">
       <div class="logo">
-        <img src="logo2.png" alt="GoodFit Logo">
+        <img src="../logo2.png" alt="GoodFit Logo">
       </div>
       <nav class="main-nav">
         <ul>
