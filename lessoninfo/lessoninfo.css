@@ -62,6 +62,15 @@ body {
 }
 /* Kết thúc CSS cho Header mới */
 
+.title {
+  text-align: center;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 500;
+  font-size: 55px;
+  color: #4D5F81;
+  margin-top: 40px;
+}
+
 /* Footer styles */
 .main-footer {
   background-color: #4D5F81; /* Màu xanh chính của footer */
@@ -158,4 +167,146 @@ body {
   .contact-item .contact-icon { /* Điều chỉnh icon trên di động */
       margin-right: 5px; /* Điều chỉnh lại khoảng cách icon trên di động */
   }
+}
+
+/* CSS mới cho banner ảnh lớn */
+.main-image-banner {
+    max-width: 1200px; /* Chiều rộng tối đa của banner */
+    margin: 40px auto 60px auto; /* Khoảng cách trên, dưới và căn giữa */
+    padding: 0 20px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn width */
+}
+
+.main-image-banner img {
+    width: 100%; /* Ảnh sẽ chiếm toàn bộ chiều rộng của container */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block;
+    border-radius: 8px; /* Bo tròn góc ảnh (tùy chọn) */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Thêm bóng đổ rõ hơn */
+}
+
+/* Cập nhật CSS cho phần nội dung (chữ) */
+.content-section {
+    display: block; /* Chuyển về block để chữ nằm dưới ảnh */
+    max-width: 1100px; /* Giảm max-width để chữ không quá rộng */
+    margin: 40px auto 60px auto; /* Điều chỉnh khoảng cách */
+    padding: 0 20px;
+}
+
+/* Không còn cần flex cho content-section nếu chỉ có text-container-only */
+/* và không còn image-container bên trong nó nữa */
+/* Xóa hoặc bỏ qua các thuộc tính display: flex, justify-content, align-items, gap cho .content-section nếu có */
+
+.text-container-only { /* Class mới cho container chữ */
+    width: 100%; /* Đảm bảo chiếm đủ không gian */
+    color: #313443;
+}
+
+.category-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700; /* Bold */
+    font-style: italic;
+    font-size: 62px;
+    color: #4D5F81;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: left; /* Căn giữa tiêu đề */
+}
+
+.subtitle {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600; /* Semibold */
+    font-size: 32px;
+    color: #4D5F81;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    text-align: left; /* Căn giữa phụ đề */
+}
+
+.description-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 25px;
+    color: #313443; /* Màu đen */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify; /* Căn đều hai bên cho đoạn văn */
+}
+
+.follow-button {
+  background-color: #4D5F81;
+  color: white;
+  border: none;
+  padding: 12px 100px;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  transition: all 0.3s ease;
+   display: block; /* Đặt nút là block để margin auto có tác dụng */
+    margin: 30px auto; /* Căn giữa theo chiều ngang và tạo khoảng cách trên */
+}
+
+.followed-button {
+  background-color: white;
+  color: #4D5F81; /* Chữ màu xanh */
+  border: 2px solid #4D5F81; /* Viền màu xanh */
+  padding: 12px 80px; /* Giữ padding như nút ban đầu để giữ kích thước */
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  transition: all 0.3s ease; /* Thêm transition để hiệu ứng mượt mà */
+   display: block; /* Đặt nút là block để margin auto có tác dụng */
+    margin: 30px auto; /* Căn giữa theo chiều ngang và tạo khoảng cách trên */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .main-image-banner {
+        margin: 30px auto 40px auto;
+        padding: 0 15px; /* Giảm padding trên mobile */
+    }
+
+    .content-section {
+        margin: 30px auto 50px auto;
+        padding: 0 15px;
+    }
+
+    .category-name {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .description-text {
+        font-size: 20px;
+        text-align: left; /* Để đoạn văn dễ đọc hơn trên màn hình nhỏ, không nên justify */
+    }
+
+    .favorite-button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-name {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .description-text {
+        font-size: 18px;
+    }
 }
