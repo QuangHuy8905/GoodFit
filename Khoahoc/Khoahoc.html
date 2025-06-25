@@ -12,23 +12,21 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="../Trangchu/Trangchu.html">
-                    <img src="../Giangvien/img/logo.png" alt="Logo GoodFit">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../Video/Video.html">VIDEO</a></li>
-                    <li><a href="../Giangvien/Giangvien.html">GIẢNG VIÊN</a></li>
-                    <li><a href="#">THÔNG BÁO</a></li>
-                    <li><a href="../Login/LOGIN/Login.html" class="login">ĐĂNG NHẬP</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+     <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="../logo2.png" alt="GoodFit Logo">
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../Video/Video.html" >VIDEO</a></li>
+          <li><a href="../Giangvien/Giangvien.html">GIẢNG VIÊN</a></li>
+          <li><a href="../Khoahoc/Khoahoc.html" class="active" >KHÓA HỌC</a></li>
+          <li><a href="#">ĐĂNG NHẬP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header> 
     <section class="trainer-section">
         <h1>KHÓA HỌC</h1>
         <p class="sub-text">Bắt đầu quá trình rèn luyện một cách thông minh với GoodFit. Lựa chọn lộ trình đúng đắn để
@@ -36,7 +34,7 @@
 
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Tìm kiếm khóa học..." />
-            <span class="search-icon">🔍</span>
+            <span><img src="../search.png" alt="search" class="search-icon"></span>
         </div>
         <div class="trainer-list" id="trainerList">
             
@@ -181,60 +179,31 @@
         <div class="pagination" id="pagination"></div>
     </section>
     <script src="script.js"></script>
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Cột 1: Thông tin liên hệ -->
-            <div class="footer-column">
-                <h3>THÔNG TIN LIÊN HỆ</h3>
-                <div class="info-row">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <span class="label">Điện thoại:</span><br>
-                        <span class="value">0907 799 609 - 0345 689 489</span>
-                    </div>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <span class="label">Địa chỉ:</span><br>
-                        <span class="value">89 Đinh Bộ Lĩnh - Quận 12 - Thành Phố Hồ Chí Minh</span>
-                    </div>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <span class="label">Email:</span><br>
-                        <span class="value">goodfit.fitness@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cột 2: Giờ hoạt động và quảng cáo -->
-            <div class="footer-column">
-                <div class="info-row">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <span class="label">Thời gian hoạt động:</span><br>
-                        <span class="value">
-                            Thứ 2 - Thứ 6: 10:00 AM - 21:00 PM<br>
-                            Thứ 7 - Chủ Nhật: 7:00 AM - 22:00 PM
-                        </span>
-                    </div>
-                </div>
-                <h3>LIÊN HỆ QUẢNG CÁO</h3>
-                <div class="info-row">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <span class="label">Email:</span><br>
-                        <span class="value">ads.goodfit@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <footer class="footess">
-        <div class="footer-inner">
-            <img src="../Trangchu/img/logo1.png" alt="GoodFit Logo" class="footer-logo">
-        </div>
-    </footer>
+<!-- Phần Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4 class="footer-heading">THÔNG TIN LIÊN HỆ</h4>
+        <p class="contact-item"><img src="../phone.png" alt="Điện thoại" class="contact-icon"> Điện thoại:</p>
+        <p class="contact-value">0907 799 609 - 0345 689 489</p>
+        <p class="contact-item"><img src="../geo.png" alt="Địa chỉ" class="contact-icon"> Địa chỉ:</p>
+        <p class="contact-value">89 Đinh Bộ Lĩnh - Quận 12 - Thành Phố Hồ Chí Minh</p>
+        <p class="contact-item"><img src="../mail.png" alt="Email" class="contact-icon"> Email:</p>
+        <p class="contact-value">goodfit.fitness@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <!-- Tiêu đề trống để căn chỉnh cột thứ 2 theo hình ảnh bạn cung cấp -->
+        <h4 class="footer-heading empty-heading"></h4>
+        <p class="contact-item"><img src="../clock.png" alt="Thời gian hoạt động" class="contact-icon"> Thời gian hoạt động:</p>
+        <p class="contact-value">Thứ 2 - Thứ 6: 10:00 AM - 21:00 PM</p>
+        <p class="contact-value">Thứ 7 - Chủ Nhật: 7:00 AM - 22:00 PM</p>
+        <h4 class="footer-heading">LIÊN HỆ QUẢNG CÁO</h4>
+        <p class="contact-item"><img src="../mail.png" alt="Email quảng cáo" class="contact-icon"> Email:</p>
+        <p class="contact-value">ads.goodfit@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <img src="../logo.png" alt="GoodFit Logo" class="footer-logo">
+    </div>
+  </footer>
 </body>

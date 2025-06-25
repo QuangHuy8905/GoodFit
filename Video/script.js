@@ -1,8 +1,19 @@
-document.querySelectorAll('.like-button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('liked');
+
+  const buttons = document.querySelectorAll('.like-button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      this.classList.toggle('liked');
+
+      if (this.classList.contains('liked')) {
+        this.textContent = 'ĐÃ THÊM VÀO YÊU THÍCH';
+      } else {
+        this.textContent = 'YÊU THÍCH';
+      }
+    });
   });
-});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const courseList = document.querySelector(".container"); // Chứa tất cả .card

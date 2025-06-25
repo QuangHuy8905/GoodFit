@@ -9,50 +9,62 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-header {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-  background: #fff;
-  color: #000;
-  padding: 10px 50px;
+.main-header {
+  background-color: #ffffff; /* Màu nền header */
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Tùy chọn: thêm bóng đổ nhẹ */
 }
-/* thanh điều hướng */
-.navbar {
-  padding: 10px 10px; /* Thêm padding trên dưới cho thanh nav */
-  box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */  
+
+.main-header .header-container { /* Đổi tên class để tránh trùng với .container đã có */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px; /* Độ rộng tối đa của container */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-nav ul {
+.main-header .logo img {
+  height: 29px; /* Điều chỉnh chiều cao logo theo font-size */
+  /* Nếu logo của bạn không phải dạng chữ, bạn có thể cần điều chỉnh chiều rộng và chiều cao */
+}
+
+.main-header .main-nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: 30px;
+  align-items: center;
 }
 
-nav ul li a {
-  margin-left: 50px;
+.main-header .main-nav ul li {
+  margin-left: 80px; /* Khoảng cách giữa các mục menu */
+}
+
+.main-header .main-nav ul li:first-child {
+  margin-left: 0;
+}
+
+.main-header .main-nav ul li a {
   text-decoration: none;
+  color: #313443; /* Màu đen */
   font-weight: bold;
-  color: #000;
+  font-size: 22px;
+  padding: 10px 0px; /* Padding ngang 0 để chữ sát nhau hơn, padding dọc 10px cho dễ click */
+  transition: color 0.3s ease; /* Thêm transition cho hiệu ứng hover */
 }
 
-.login {
-  color: #4261e2;
+.main-header .main-nav ul li a:hover {
+  color: #4D5F82; /* Màu xanh khi hover */
 }
 
-.hero {
-  position: relative;
-  height: 90vh;
-  background: url('img/background.png') no-repeat center center/cover;
+.main-header .main-nav ul li a.active {
+  color: #4D5F82; /* Màu xanh cho mục active */
+   border-bottom: 3px solid #4D5F82; /* THÊM DÒNG NÀY: Viền dưới màu xanh */
+  padding-bottom: 20px; /* THÊM DÒNG NÀY: Để tạo khoảng cách giữa chữ và viền */
+  /* Bạn có thể thêm gạch chân hoặc style khác cho mục active ở đây */
 }
-.logo img {
-  float: left;
-  width: 100px;  /* Điều chỉnh chiều rộng mong muốn của logo */
-  height: 20px;
-  margin-right: auto ; /* lệch hẵn về bên trái */
-  margin-left: 20px ; /* cách viền trái trang web 100px */
-}
+
 /* thanh tìm kiếm và tiêu đề */
 .trainer-section {
   max-width: 1170px;
@@ -62,14 +74,16 @@ nav ul li a {
 }
 
 h1 {
-  color: #3b4b77;
-  font-size: 36px;
+  color: #4D5F81;
+  font-size: 55px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
 .sub-text {
-  color: #555;
-  font-size: 16px;
+  color: #555547;
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 
@@ -82,7 +96,7 @@ h1 {
 
 #searchInput {
   width: 100%;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 40px 10px 70px;
   border: 2px solid #3b4b77;
   border-radius: 6px;
   font-size: 16px;
@@ -128,15 +142,16 @@ h1 {
 
 .card h3 {
   color: #3f4a72;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 30px;
   margin: 16px 0 8px;
   text-transform: uppercase;
 }
 .card p {
   margin: 4px 0;
-  font-size: 14px;
-  color: #444;
+  font-size: 15px;
+  font-weight: 400;
+  color: #181817;
 }
 /* thanh phân trang */
 .pagination {
@@ -168,74 +183,101 @@ h1 {
   color: white;
 }
 
-/* footer */
-.footer {
-  background-color: #516386;
+/* Footer styles */
+.main-footer {
+  background-color: #4D5F81; /* Màu xanh chính của footer */
   color: white;
-  padding: 40px 200px;
-  font-family: Arial, sans-serif;
+  padding-top: 50px;
+  margin-top: 80px; /* Khoảng cách từ phần trên */
 }
 
-.footer-container {
+.footer-content {
   display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+  justify-content: space-around; /* Căn đều các cột */
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px 50px 20px; /* Padding dưới để phân cách với bottom bar */
+  flex-wrap: wrap; /* Cho phép các cột xuống dòng trên màn hình nhỏ */
 }
 
 .footer-column {
-  flex: 1;
-  min-width: 300px;
-}
-
-.footer-column h3 {
-  font-size: 18px;
+  flex: 1; /* Cột sẽ chiếm không gian bằng nhau */
+  min-width: 280px; /* Đảm bảo cột không quá hẹp trên màn hình nhỏ */
   margin-bottom: 20px;
-  font-weight: bold;
 }
 
-.info-row {
-  display: flex;
-  align-items: flex-start;
+.footer-heading {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400; /* Bold */
+  font-size: 22px;
+  color: #FFFFFF; /* Màu chữ trắng cho tiêu đề */
+  margin-bottom: 25px;
+  text-transform: uppercase; /* Chữ hoa */
+}
+
+/* Style cho tiêu đề trống trong footer để căn chỉnh */
+.footer-heading.empty-heading {
+    visibility: hidden; /* Ẩn tiêu đề nhưng vẫn giữ không gian */
+}
+
+
+.contact-item {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 5px; /* Khoảng cách giữa icon và chữ */
+  display: flex; /* Dùng flex để căn icon và text trên cùng 1 hàng */
+  align-items: center; /* Căn giữa icon và text theo chiều dọc */
+}
+
+/* Style cho các ảnh icon trong phần liên hệ */
+.contact-icon {
+    width: 40px; /* Kích thước icon */
+    height: 40px;
+    margin-right: 10px; /* Khoảng cách giữa icon và text */
+    vertical-align: middle; /* Căn chỉnh icon với text */
+}
+
+.contact-value {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 22px; /* Màu chữ trắng cho giá trị liên hệ */
+  color: #FFFFFF;
+  margin-left: 30px; /* Căn chỉnh nội dung dưới icon */
   margin-bottom: 15px;
-  gap: 10px;
+  line-height: 1.4;
 }
 
-.info-row i {
-  font-size: 18px;
-  margin-top: 4px;
-  color: white;
-  min-width: 20px;
+/* Thanh dưới cùng của footer chứa logo */
+.footer-bottom-bar {
+  background-color: #313443; /* Màu xanh đậm hơn */
   text-align: center;
-}
-
-.label {
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.value {
-  color: #ddd;
-  font-size: 15px;
-  line-height: 1.6;
-}
-.footess {
-  background-color: #000000; /* Màu nền đen */
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding: 20px 0;
-  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3); /* đổ bóng nhẹ phía dưới */
 }
 
-.footer-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-logo {
+  max-width: 150px; /* Kích thước logo */
+  height: auto;
 }
 
-.footess-logo {
-  max-height: 40px;
-  object-fit: contain;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Xếp chồng các cột */
+    align-items: center; /* Căn giữa các cột */
+    text-align: center; /* Căn giữa text trong cột */
+  }
+  .footer-column {
+    min-width: unset; /* Xóa min-width trên di động */
+    width: 90%; /* Chiếm gần hết chiều rộng */
+  }
+  .contact-item, .contact-value {
+    justify-content: center; /* Căn giữa nội dung trên di động */
+    margin-left: 0; /* Xóa margin-left để căn giữa */
+  }
+  .contact-item .contact-icon { /* Điều chỉnh icon trên di động */
+      margin-right: 5px; /* Điều chỉnh lại khoảng cách icon trên di động */
+  }
 }
+

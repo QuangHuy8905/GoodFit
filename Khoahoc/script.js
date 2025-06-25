@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const keyword = this.value.toLowerCase();
 
     filteredCourses = allCourses.filter(course => {
-      const title = course.querySelector("h3").textContent.toLowerCase();
+      const title = course.querySelector("p").textContent.toLowerCase();
       return title.includes(keyword);
     });
 
