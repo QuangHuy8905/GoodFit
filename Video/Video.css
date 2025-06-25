@@ -73,7 +73,7 @@ body {
 }
 
 h1 {
-  color: #3b4b77;
+  color: #4D5F81;
   font-size: 55px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -96,7 +96,7 @@ h1 {
 #searchInput {
   width: 100%;
   padding: 10px 40px 10px 70px;
-  border: 2px solid #3b4b77;
+  border: 2px solid #4D5F81;
   border-radius: 6px;
   font-size: 16px;
 }
@@ -169,8 +169,8 @@ h1 {
 /* nút yêu thích */
 /* Button */
 .like-button {
-  background-color: #041f56;
-  color: rgb(221, 218, 233);
+  background-color: #4D5F81;
+  color: rgb(255, 255, 255);
   padding: 12px 20px;
   border: none;
   border-radius: 9999px;
@@ -185,7 +185,7 @@ h1 {
 }
 
 .like-button:hover {
-  background-color: #3c4d6b;
+  background-color: #4D5F81;
 }
 
 .like-button.liked {
@@ -217,7 +217,7 @@ h1 {
 }
 
 .pagination button.active {
-  background-color: #3b4b77;
+  background-color: #4D5F81;
   color: white;
 }
 /* Footer styles */

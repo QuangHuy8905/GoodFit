@@ -234,7 +234,7 @@ body {
     text-align: justify; /* Căn đều hai bên cho đoạn văn */
 }
 
-.follow-button {
+.like-button {
   background-color: #4D5F81;
   color: white;
   border: none;
@@ -249,7 +249,7 @@ body {
     margin: 30px auto; /* Căn giữa theo chiều ngang và tạo khoảng cách trên */
 }
 
-.followed-button {
+.liked-button {
   background-color: white;
   color: #4D5F81; /* Chữ màu xanh */
   border: 2px solid #4D5F81; /* Viền màu xanh */

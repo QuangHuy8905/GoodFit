@@ -1,23 +1,23 @@
 // Lắng nghe sự kiện DOMContentLoaded để đảm bảo HTML đã được tải đầy đủ
 document.addEventListener('DOMContentLoaded', function() {
   // Lấy tham chiếu đến nút "THEO DÕI" bằng ID của nó
-  const followButton = document.getElementById('followButton');
+  const followButton = document.getElementById('likeButton');
 
   // Kiểm tra xem nút có tồn tại không trước khi thêm bộ lắng nghe sự kiện
   if (followButton) {
     // Thêm bộ lắng nghe sự kiện click vào nút
     followButton.addEventListener('click', function() {
       // Kiểm tra xem nút có class 'followed-button' (trạng thái đã theo dõi) chưa
-      if (this.classList.contains('followed-button')) {
+      if (this.classList.contains('liked-button')) {
         // Nếu đã theo dõi, chuyển về trạng thái ban đầu
         this.textContent = 'LƯU VÀO YÊU THÍCH'; // Đổi lại chữ
-        this.classList.remove('followed-button'); // Xóa class "followed-button"
-        this.classList.add('follow-button'); // Thêm lại class "follow-button" (đảm bảo style ban đầu)
+        this.classList.remove('liked-button'); // Xóa class "followed-button"
+        this.classList.add('like-button'); // Thêm lại class "follow-button" (đảm bảo style ban đầu)
       } else {
         // Nếu chưa theo dõi, chuyển sang trạng thái đã theo dõi
         this.textContent = 'ĐÃ LƯU VÀO YÊU THÍCH'; // Đổi chữ thành "ĐÃ THEO DÕI"
-        this.classList.add('followed-button'); // Thêm class "followed-button"
-        this.classList.remove('follow-button'); // Xóa class "follow-button"
+        this.classList.add('liked-button'); // Thêm class "followed-button"
+        this.classList.remove('like-button'); // Xóa class "follow-button"
       }
     });
   }
