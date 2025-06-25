@@ -75,6 +75,7 @@ body {
 
 h1 {
   color: #4D5F81;
+   font-family: 'IBM Plex Serif', serif;
   font-size: 55px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -85,13 +86,15 @@ h1 {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 30px;
+  margin: 0 auto 30px auto;
+  max-width: 900px;
 }
 
 .search-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto 40px;
+  max-width: 1200px;
+  margin: 0 auto 220px;
 }
 
 #searchInput {
@@ -113,38 +116,63 @@ h1 {
 
 .trainer-list {
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  row-gap: 220px;    /* Khoảng cách giữa các hàng (ví dụ: 40px) */
+  column-gap: 20px; /* Khoảng cách giữa các cột (ví dụ: 30px) */
 }
+
 /* proprile huấn luyện viên */
 .card {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px;  Bỏ padding-bottom ở đây vì sẽ được thêm vào .card-info */
   transition: transform 0.3s;
+  position: relative; /* Quan trọng: Để .card-image-wrapper có thể dùng position: absolute */
+  padding-top: 80px; /* Tạo khoảng trống ở trên để ảnh nổi lên. Điều chỉnh nếu ảnh lớn hơn/nhỏ hơn */
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.card img {
-  width: 260px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 260px;
-  object-fit: cover;
+.card-image-wrapper {
+  position: absolute; /* Đặt ảnh ở vị trí tuyệt đối */
+  top: -170px; /* Nổi lên trên 60px so với top của card. Điều chỉnh theo ý muốn */
+  left: 50%; /* Di chuyển từ trái vào 50% */
+  transform: translateX(-50%); /* Căn giữa ảnh chính xác */
+  width: 250px; /* Tăng chiều rộng của ảnh, ví dụ 200px */
+  height: 250px; /* Tăng chiều cao của ảnh, ví dụ 200px */
+  border-radius: 10px; /* Để ảnh tròn */
+  overflow: hidden; /* Cắt ảnh theo hình tròn */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Chỉnh bóng đổ rất nhẹ */
+  display: flex; /* Dùng flex để căn giữa ảnh bên trong */
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image-wrapper img {
+  width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của wrapper */
+  height: 100%; /* Ảnh chiếm toàn bộ chiều cao của wrapper */
+  object-fit: cover; /* Đảm bảo ảnh được cover hoàn toàn wrapper */
+  border-radius: 10px; /* Đảm bảo ảnh cũng tròn nếu wrapper tròn */
+  background-color: transparent; /* Đảm bảo background trong suốt */
+}
+
+.card-info {
+  padding: 0 20px 40px; /* Padding cho phần thông tin (trên, trái, dưới, phải) */
+  /* Margin-top cho .card-info có thể không cần thiết nếu padding-top của .card đủ lớn */
 }
 
 .card h3 {
   color: #3f4a72;
   font-weight: bold;
   font-size: 30px;
-  margin: 16px 0 8px;
+  margin-top: 30px; /* Khoảng cách từ đầu phần info đến tên HLV */
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 .card p {
@@ -153,6 +181,7 @@ h1 {
   font-weight: 400;
   color: #181817;
 }
+
 /* thanh phân trang */
 .pagination {
   display: flex;
@@ -168,6 +197,8 @@ h1 {
   width: 36px;
   height: 36px;
   font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #4D5F81;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
