@@ -148,6 +148,20 @@ h1 {
   justify-content: space-between;
 }
 
+/* Quy tắc cho thẻ <a> bọc toàn bộ .course */
+.course a {
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+    /* Để thẻ <a> chiếm toàn bộ diện tích của .course nếu cần */
+    display: block; 
+    height: 100%;
+}
+
+/* Quy tắc đảm bảo các phần tử văn bản bên trong link cũng không có gạch chân và giữ màu gốc */
+.course a h3,
+.course a p {
+    text-decoration: none; /* Bỏ gạch chân cho tiêu đề và đoạn văn */
+}
+
 .course-content h3 {
   font-size: 27px;
   font-weight: bold;

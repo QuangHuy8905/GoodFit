@@ -136,6 +136,20 @@ h1 {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+/* THÊM ĐOẠN CODE NÀY VÀO ĐÂY */
+.container .card a {
+ text-decoration: none; /* Bỏ gạch chân */
+ /* Đảm bảo màu chữ không bị đổi sang màu xanh mặc định của link */
+}
+
+/* Đảm bảo các thành phần chữ bên trong link cũng không có gạch chân và giữ nguyên màu */
+.container .card a p,
+.container .card a strong,
+.container .card a span { /* Thêm span nếu bạn có dùng trong tiêu đề/meta */
+ text-decoration: none;
+}
+/* KẾT THÚC ĐOẠN CODE CẦN THÊM */
+
 .card:hover {
 transform: translateY(-5px); /* Nổi lên 5px /
 box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); / Tăng bóng đổ khi hover */
