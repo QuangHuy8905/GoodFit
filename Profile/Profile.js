@@ -1,23 +1,9 @@
-
 const icons = document.querySelectorAll(".icon");
 const sections = document.querySelectorAll(".main-tab");
 
-icons.forEach(icon => {
-  icon.addEventListener("click", () => {
-    const target = icon.getAttribute("data-target") + "-section";
+// Đảm bảo phần profile luôn active và icon profile luôn được làm nổi bật khi không có các tab khác
+sections.forEach(section => section.classList.remove("active"));
+icons.forEach(i => i.classList.remove("active"));
 
-    // Ẩn toàn bộ section
-    sections.forEach(section => section.classList.remove("active"));
-    icons.forEach(i => i.classList.remove("active"));
-
-    // Hiện đúng section
-    document.getElementById(target).classList.add("active");
-    icon.classList.add("active");
-  });
-});
-
-
-
-
-
-
+document.getElementById("profile-section").classList.add("active");
+document.querySelector('.sidebar .icon[data-target="profile"]').classList.add("active");
