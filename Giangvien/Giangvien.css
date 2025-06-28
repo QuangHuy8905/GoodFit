@@ -167,6 +167,21 @@ h1 {
   /* Margin-top cho .card-info có thể không cần thiết nếu padding-top của .card đủ lớn */
 }
 
+/* Thêm đoạn CSS này vào để bỏ gạch chân cho các liên kết trong thẻ giảng viên */
+.trainer-list .card a {
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+    /* Quan trọng: Không đặt 'color: inherit;' trực tiếp lên thẻ <a> nếu bạn muốn màu chữ của h3 và p được giữ nguyên */
+    display: block; /* Đảm bảo thẻ <a> chiếm toàn bộ không gian của card để dễ click */
+    height: 100%; /* Đảm bảo thẻ <a> kéo dài hết chiều cao của card */
+}
+
+/* Đảm bảo các phần tử văn bản (h3, p) bên trong link cũng không có gạch chân và giữ màu gốc */
+.trainer-list .card a h3,
+.trainer-list .card a p {
+    text-decoration: none; /* Bỏ gạch chân cho tiêu đề và đoạn văn bản */
+    /* KHÔNG đặt 'color: inherit;' ở đây. Hãy để các quy tắc riêng của h3 và p trong .card-info quyết định màu sắc. */
+}
+
 .card h3 {
   color: #3f4a72;
   font-weight: bold;

@@ -198,6 +198,8 @@ background: url('img/background.png') no-repeat center center/cover;
     display: flex; /* Card tự nó là flex container */
     flex-direction: column; /* Các nội dung bên trong card sẽ xếp theo cột */
     text-align: left; /* Căn trái toàn bộ nội dung trong card */
+    padding-bottom: 20px; /* THÊM MỚI: Tăng khoảng cách từ nút "YÊU THÍCH" đến viền dưới card */
+
 }
 
 .video-list-homepage .card:hover {
@@ -384,59 +386,81 @@ background: url('img/background.png') no-repeat center center/cover;
 }
 /* proprile huấn luyện viên */
 .title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #3a4a66;
-  margin-bottom: 10px;
+ font-size: 32px;
+ font-weight: bold;
+ color: #3a4a66;
+ margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 18px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 30px;
+ font-size: 18px;
+ font-weight: 400;
+ color: #555;
+ margin-bottom: 230px;
 }
 .card-container {
-  max-width: 1170px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap;
+ max-width: 1170px;
+ display: flex;
+ gap: 20px;
+ flex-wrap: nowrap;
 }
 
-.card {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding-bottom: 20px;
-  width: 380px;
-  transition: transform 0.3s;
+.card-container .card { /* Áp dụng style của .card từ Giangvien.css */
+ background-color: rgb(255, 255, 255);
+ border-radius: 20px;
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+ text-align: center;
+ transition: transform 0.3s;
+ position: relative; /* Quan trọng: Để .card-image-wrapper có thể dùng position: absolute */
+ padding-top: 80px; /* Tạo khoảng trống ở trên để ảnh nổi lên */
+ width: 380px; /* Giữ nguyên độ rộng từ Trangchu.css */
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card-container .card:hover {
+ transform: translateY(-5px);
 }
 
-.card img {
-  width: 260px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 260px;
-  object-fit: cover;
+.card-container .card-image-wrapper { /* Áp dụng style của .card-image-wrapper từ Giangvien.css */
+ position: absolute; /* Đặt ảnh ở vị trí tuyệt đối */
+ top: -170px; /* Nổi lên trên với giá trị âm */
+ left: 50%; /* Di chuyển từ trái vào 50% */
+ transform: translateX(-50%); /* Căn giữa ảnh chính xác */
+ width: 250px; /* Chiều rộng của ảnh */
+ height: 250px; /* Chiều cao của ảnh */
+ border-radius: 10px; /* Bo góc của wrapper */
+ overflow: hidden; /* Cắt ảnh theo hình tròn */
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+ display: flex; /* Dùng flex để căn giữa ảnh bên trong */
+ justify-content: center;
+ align-items: center;
 }
 
-.card h3 {
-  color: #3f4a72;
-  font-weight: 700;
-  font-size: 30px;
-  margin: 16px 0 8px;
-  text-transform: uppercase;
+.card-container .card-image-wrapper img { /* Áp dụng style của img bên trong .card-image-wrapper từ Giangvien.css */
+ width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của wrapper */
+ height: 100%; /* Ảnh chiếm toàn bộ chiều cao của wrapper */
+ object-fit: cover; /* Đảm bảo ảnh được cover hoàn toàn wrapper */
+ border-radius: 10px; /* Đảm bảo ảnh cũng tròn nếu wrapper tròn */
+ background-color: transparent; /* Đảm bảo background trong suốt */
 }
-.card p {
-  margin: 4px 0;
-  font-size: 15px;
-  font-weight: 400;
-  color: #444;
+
+.card-container .card-info { /* Áp dụng style của .card-info từ Giangvien.css */
+ padding: 0 20px 20px; /* Padding cho phần thông tin */
+}
+
+.card-container .card h3 { /* Áp dụng style của h3 từ Giangvien.css */
+ color: #3f4a72;
+ font-weight: bold;
+ font-size: 30px;
+ margin-top: -5px; /* Khoảng cách từ đầu phần info đến tên HLV */
+ margin-bottom: 5px;
+ text-transform: uppercase;
+}
+
+.card-container .card p { /* Áp dụng style của p từ Giangvien.css */
+ margin: -5px 0;
+ font-size: 15px;
+ font-weight: 400;
+ color: #181817; /* Màu chữ thống nhất */
 }
 /* backgroud 2 */
 .banner1 {
