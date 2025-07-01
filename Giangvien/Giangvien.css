@@ -9,60 +9,62 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.main-header {
-  background-color: #ffffff; /* Màu nền header */
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Tùy chọn: thêm bóng đổ nhẹ */
-}
-
-.main-header .header-container { /* Đổi tên class để tránh trùng với .container đã có */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 140px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
+  display: inline-flex;
   align-items: center;
-  max-width: 1200px; /* Độ rộng tối đa của container */
-  margin: 0 auto;
-  padding: 0 20px;
+  gap: 6px;
 }
 
-.main-header .logo img {
-  height: 29px; /* Điều chỉnh chiều cao logo theo font-size */
-  /* Nếu logo của bạn không phải dạng chữ, bạn có thể cần điều chỉnh chiều rộng và chiều cao */
+.dropdown-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  stroke: #343A40; /* màu mũi tên */
 }
 
-.main-header .main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.login-btn {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* SemiBold */
+  font-size: 14px;
+  width: 104px;
+  height: 38px;
+  background-color: #475875;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
   display: flex;
   align-items: center;
-}
-
-.main-header .main-nav ul li {
-  margin-left: 80px; /* Khoảng cách giữa các mục menu */
-}
-
-.main-header .main-nav ul li:first-child {
-  margin-left: 0;
-}
-
-.main-header .main-nav ul li a {
-  text-decoration: none;
-  color: #313443; /* Màu đen */
-  font-weight: bold;
-  font-size: 22px;
-  padding: 10px 0px; /* Padding ngang 0 để chữ sát nhau hơn, padding dọc 10px cho dễ click */
-  transition: color 0.3s ease; /* Thêm transition cho hiệu ứng hover */
-}
-
-.main-header .main-nav ul li a:hover {
-  color: #4D5F82; /* Màu xanh khi hover */
-}
-
-.main-header .main-nav ul li a.active {
-  color: #4D5F82; /* Màu xanh cho mục active */
-   border-bottom: 3px solid #4D5F82; /* THÊM DÒNG NÀY: Viền dưới màu xanh */
-  padding-bottom: 20px; /* THÊM DÒNG NÀY: Để tạo khoảng cách giữa chữ và viền */
-  /* Bạn có thể thêm gạch chân hoặc style khác cho mục active ở đây */
+  justify-content: center;
+  cursor: pointer;
 }
 
 /* thanh tìm kiếm và tiêu đề */
@@ -76,14 +78,15 @@ body {
 h1 {
   color: #4D5F81;
    font-family: 'IBM Plex Serif', serif;
-  font-size: 55px;
+  font-size: 52px;
   font-weight: 500;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .sub-text {
-  color: #555547;
-  font-size: 20px;
+  color: #524F4F;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 30px;
   margin: 0 auto 30px auto;
@@ -229,101 +232,62 @@ h1 {
   color: white;
 }
 
-/* Footer styles */
-.main-footer {
-  background-color: #4D5F81; /* Màu xanh chính của footer */
-  color: white;
-  padding-top: 50px;
-  margin-top: 80px; /* Khoảng cách từ phần trên */
+.footer {
+  background-color: #fff;
+  padding: 40px 60px;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.footer-content {
+.footer-top {
   display: flex;
-  justify-content: space-around; /* Căn đều các cột */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 50px 20px; /* Padding dưới để phân cách với bottom bar */
-  flex-wrap: wrap; /* Cho phép các cột xuống dòng trên màn hình nhỏ */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-column {
-  flex: 1; /* Cột sẽ chiếm không gian bằng nhau */
-  min-width: 280px; /* Đảm bảo cột không quá hẹp trên màn hình nhỏ */
-  margin-bottom: 20px;
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.footer-heading {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 400; /* Bold */
-  font-size: 22px;
-  color: #FFFFFF; /* Màu chữ trắng cho tiêu đề */
-  margin-bottom: 25px;
-  text-transform: uppercase; /* Chữ hoa */
-}
-
-/* Style cho tiêu đề trống trong footer để căn chỉnh */
-.footer-heading.empty-heading {
-    visibility: hidden; /* Ẩn tiêu đề nhưng vẫn giữ không gian */
-}
-
-
-.contact-item {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 400; /* Regular */
+.footer-links a {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.65);
-  margin-bottom: 5px; /* Khoảng cách giữa icon và chữ */
-  display: flex; /* Dùng flex để căn icon và text trên cùng 1 hàng */
-  align-items: center; /* Căn giữa icon và text theo chiều dọc */
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
 }
 
-/* Style cho các ảnh icon trong phần liên hệ */
-.contact-icon {
-    width: 40px; /* Kích thước icon */
-    height: 40px;
-    margin-right: 10px; /* Khoảng cách giữa icon và text */
-    vertical-align: middle; /* Căn chỉnh icon với text */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
 }
 
-.contact-value {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: 22px; /* Màu chữ trắng cho giá trị liên hệ */
-  color: #FFFFFF;
-  margin-left: 30px; /* Căn chỉnh nội dung dưới icon */
-  margin-bottom: 15px;
-  line-height: 1.4;
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Thanh dưới cùng của footer chứa logo */
-.footer-bottom-bar {
-  background-color: #313443; /* Màu xanh đậm hơn */
-  text-align: center;
-  padding: 20px 0;
+.social-icon-img {
+    width: 20px; /* Đặt chiều rộng */
+    height: 20px; /* Đặt chiều cao */
+    object-fit: contain; /* Đảm bảo hình ảnh vừa vặn mà không bị cắt */
+    margin: 0 10px; /* Khoảng cách giữa các icon */
+    vertical-align: middle; /* Căn chỉnh với văn bản nếu có */
 }
 
-.footer-logo {
-  max-width: 150px; /* Kích thước logo */
-  height: auto;
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa các icon nếu cần */
+    gap: 15px; /* Hoặc dùng gap thay cho margin trên img */
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column; /* Xếp chồng các cột */
-    align-items: center; /* Căn giữa các cột */
-    text-align: center; /* Căn giữa text trong cột */
-  }
-  .footer-column {
-    min-width: unset; /* Xóa min-width trên di động */
-    width: 90%; /* Chiếm gần hết chiều rộng */
-  }
-  .contact-item, .contact-value {
-    justify-content: center; /* Căn giữa nội dung trên di động */
-    margin-left: 0; /* Xóa margin-left để căn giữa */
-  }
-  .contact-item .contact-icon { /* Điều chỉnh icon trên di động */
-      margin-right: 5px; /* Điều chỉnh lại khoảng cách icon trên di động */
-  }
+.footer .copyright {
+  color: #343A40;
+  font-size: 14px;
+  font-weight: 400;
 }
-

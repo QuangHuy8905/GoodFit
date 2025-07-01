@@ -7,20 +7,24 @@
   <link rel="stylesheet" href="teacherinfo.css">
 </head>
 <body>
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo">
-        <a href="../Trangchu/Trangchu.html"> <img src="../logo2.png" alt="GoodFit Logo"> </a>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="../Video/Video.html">VIDEO</a></li>
-          <li><a href="../Giangvien/Giangvien.html" class="active" >GIẢNG VIÊN</a></li>
-          <li><a href="../Khoahoc/Khoahoc.html">KHÓA HỌC</a></li>
-          <li><a href="../Login/LOGIN/Login.html">ĐĂNG NHẬP</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
+    <nav class="nav-links">
+      <a href="../index.html">Trang Chủ</a>
+      <a href="../Video/Video.html">Video
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="../Giangvien/Giangvien.html">Huấn Luyện Viên
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="#">Cửa Hàng</a>
+      <a href="#">Về GoodFit</a>
+    </nav>
+    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
   </header>
   <h1 class="title">THÔNG TIN GIẢNG VIÊN</h1>
   <div class="container">
@@ -102,33 +106,41 @@
     </div>
   </div>
 
- <!-- Phần Footer -->
-  <footer class="main-footer">
-    <div class="footer-content">
-      <div class="footer-column">
-        <h4 class="footer-heading">THÔNG TIN LIÊN HỆ</h4>
-        <p class="contact-item"><img src="../phone.png" alt="Điện thoại" class="contact-icon"> Điện thoại:</p>
-        <p class="contact-value">0907 799 609 - 0345 689 489</p>
-        <p class="contact-item"><img src="../geo.png" alt="Địa chỉ" class="contact-icon"> Địa chỉ:</p>
-        <p class="contact-value">89 Đinh Bộ Lĩnh - Quận 12 - Thành Phố Hồ Chí Minh</p>
-        <p class="contact-item"><img src="../mail.png" alt="Email" class="contact-icon"> Email:</p>
-        <p class="contact-value">goodfit.fitness@gmail.com</p>
-      </div>
-      <div class="footer-column">
-        <!-- Tiêu đề trống để căn chỉnh cột thứ 2 theo hình ảnh bạn cung cấp -->
-        <h4 class="footer-heading empty-heading"></h4>
-        <p class="contact-item"><img src="../clock.png" alt="Thời gian hoạt động" class="contact-icon"> Thời gian hoạt động:</p>
-        <p class="contact-value">Thứ 2 - Thứ 6: 10:00 AM - 21:00 PM</p>
-        <p class="contact-value">Thứ 7 - Chủ Nhật: 7:00 AM - 22:00 PM</p>
-        <h4 class="footer-heading">LIÊN HỆ QUẢNG CÁO</h4>
-        <p class="contact-item"><img src="../mail.png" alt="Email quảng cáo" class="contact-icon"> Email:</p>
-        <p class="contact-value">ads.goodfit@gmail.com</p>
-      </div>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
     </div>
-    <div class="footer-bottom-bar">
-      <img src="../logo.png" alt="GoodFit Logo" class="footer-logo">
+    <nav class="footer-links">
+      <a href="../index.html">Trang Chủ</a>
+      <a href="../Video/Video.html">Video
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="../Giangvien/Giangvien.html">Người Hướng Dẫn
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="#">Cửa Hàng</a>
+      <a href="#">Về GoodFit</a>
+    </nav>
+    <a href="Login/Login.html" class="login-btn">Đăng Nhập</a>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="#"><img src="../img/fb.png" alt="Facebook" class="social-icon-img"></a>
+      <a href="#"><img src="../img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
+      <a href="#"><img src="../img/ig.png" alt="Instagram" class="social-icon-img"></a>
+      <a href="#"><img src="../img/gg.png" alt="Google" class="social-icon-img"></a>
     </div>
-  </footer>
+    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
+  </div>
+</footer>
 
   <script src="teacherinfo.js"></script>
 </body>
