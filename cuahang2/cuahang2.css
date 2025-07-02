@@ -71,6 +71,8 @@ body {
 
 
 
+
+
 .store {
   padding: 40px 20px;
   max-width: 1200px;
@@ -107,7 +109,7 @@ body {
   align-items: center;
   padding: 0 16px;
   background-color: #ffffff;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .search-box input {
@@ -128,13 +130,169 @@ body {
   flex-shrink: 0;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 sản phẩm mỗi hàng */
-  gap: 40px 20px; /* 40px giữa hàng, 20px giữa cột */
-  justify-items: center;
-  max-width: 1000px;         /* ✅ đủ để chứa 3 card + gap */
-  margin: 0 auto;            /* ✅ căn giữa toàn bộ grid */
+
+
+
+.product-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.product-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-product-img {
+  width: 419px;
+  height: 312px;
+  object-fit: cover;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.product-thumbnails img {
+  width: 125px;
+  height: 93px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-right {
+  flex: 1;
+  min-width: 600px;
+}
+
+.product-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* medium */
+  font-size: 35px;
+  color: #343A40;
+  margin-bottom: 50px;
+  text-align: left;
+  margin-top: -90px;
+}
+
+.product-price {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* medium */
+  font-size: 40px;
+  color: #4D5F81;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Thêm vào giỏ hàng */
+.outline-button {
+  background-color: transparent;
+  color: #4D5F81;
+  border: 2px solid #4D5F81;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600; /* semibold */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Mua ngay */
+.cta-button {
+  background-color: #394867;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600; /* semibold */
+  font-size: 16px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+
+
+.specs {
+  padding: 120px 60px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-bottom: -60px;
+}
+
+.specs-title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #343A40;
+  margin-bottom: 30px;
+}
+
+.specs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.spec-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #343A40;
+}
+
+.spec-value {
+  font-size: 20px;
+  font-weight: 500;
+  color: #343A40;
+  text-align: right;
+}
+
+.spec-value.gray {
+  color: #666666;
+}
+
+
+
+
+.related-section {
+  padding: 60px;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.related-title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #343A40;
+  margin-bottom: 40px;
+}
+
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
 .product-card {
@@ -182,16 +340,6 @@ body {
   text-align: left; /* ✅ Căn trái */
 }
 
-a.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product-card h2 a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .product-card .price {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500; /* Medium */
@@ -201,47 +349,6 @@ a.card-link {
   text-align: left; /* ✅ Căn trái */
 }
 
-
-
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 50px;
-}
-
-.pagination button {
-  border: none;
-  background: white;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-weight: bold;
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: #4D5F81;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.pagination button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.pagination button.active {
-  background-color: #4D5F81;
-  color: white;
-}
-
-.pagination button:disabled {
-  background: none;
-  box-shadow: none;
-  cursor: default;
-  font-weight: normal;
-  color: #4D5F81;
-}
 
 
 
