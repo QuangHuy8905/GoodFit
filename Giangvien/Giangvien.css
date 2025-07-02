@@ -76,45 +76,53 @@ body {
 }
 
 h1 {
-  color: #4D5F81;
-   font-family: 'IBM Plex Serif', serif;
-  font-size: 52px;
+  font-family: 'IBM Plex Serif', serif;
   font-weight: 500;
+  font-size: 52px;
+  color: #4D5F81;
   margin-bottom: 10px;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .sub-text {
-  color: #524F4F;
-  font-size: 16px;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
-  margin-bottom: 30px;
-  margin: 0 auto 30px auto;
-  max-width: 900px;
-}
-
-.search-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 220px;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 10px 40px 10px 70px;
-  border: 2px solid #3b4b77;
-  border-radius: 6px;
   font-size: 16px;
+  color: #524F4F;
+  margin-bottom: 70px;
+  max-width: 700px;
+  margin: 0 auto 70px auto;
 }
 
-.search-icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: #3b4b77;
+.search-box {
+  width: 696px;
+  height: 60px;
+  border: 2px solid #4D5F81;
+  border-radius: 12px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #ffffff;
+  margin-bottom: 220px;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 0 10px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #4D5F81;
+  flex-shrink: 0;
 }
 
 .trainer-list {

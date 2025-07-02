@@ -34,15 +34,16 @@
     <h1>HUẤN LUYỆN VIÊN</h1>
     <p class="sub-text">Tập luyện hiệu quả hơn khi bạn chọn đúng người dẫn dắt – người hiểu mục tiêu, truyền cảm hứng và đồng hành đúng nhịp với bạn.</p>
     
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Tìm kiếm giảng viên..." />
-    <span class="search-icon">
-        <!-- SVG icon for magnifying glass -->
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-        </svg>
-    </span>
+    <div class="search-box">
+      <svg class="icon search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+      </svg>
+      <input type="text" id="searchInput" placeholder="Tìm kiếm..." />
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M4 6h16M4 12h8m-8 6h16M10 6v4M16 12v4M8 18v-2" />
+      </svg>
     </div>
 
     <div class="trainer-list" id="trainerList">
