@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông Tin Giảng Viên</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fav.css">
+</head>
+<body>
+  <header class="navbar">
+    <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
+    <nav class="nav-links">
+      <a href="../index.html">Trang Chủ</a>
+      <a href="../Video/Video.html">Video
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="../Giangvien/Giangvien.html">Huấn Luyện Viên
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
+      <a href="../about/about.html">Về GoodFit</a>
+    </nav>
+    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
+  </header>
+
+  <section class="trainer-section">
+    <h1>YÊU THÍCH</h1>
+    <p class="sub-text">Tất cả video, huấn luyện viên của bạn đều được lưu trữ tại đây – sẵn sàng để bạn xem lại bất cứ khi nào!</p>
+    
+    <div class="search-box">
+      <svg class="icon search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+      </svg>
+      <input type="text" id="searchInput" placeholder="Tìm kiếm..." />
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M4 6h16M4 12h8m-8 6h16M10 6v4M16 12v4M8 18v-2" />
+      </svg>
+    </div>
+
+    <h2>VIDEO</h2>
+      <div class="container">
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=your-video-id-1" target="_blank">
+                    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+                    <div class="card-content">
+                        <p class="author">SHINPHAMM</p>
+                        <p class="title">
+                            <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+                        </p>
+                        <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+                    </div>
+                </a>
+                <button class="like-button">YÊU THÍCH</button>
+            </div>
+
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=your-video-id-2" target="_blank">
+                    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+                    <div class="card-content">
+                        <p class="author">SHINPHAMM</p>
+                        <p class="title">
+                            <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+                        </p>
+                        <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+                    </div>
+                </a>
+                <button class="like-button">YÊU THÍCH</button>
+            </div>
+
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=your-video-id-2" target="_blank">
+                    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+                    <div class="card-content">
+                        <p class="author">SHINPHAMM</p>
+                        <p class="title">
+                            <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+                        </p>
+                        <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+                    </div>
+                </a>
+                <button class="like-button">YÊU THÍCH</button>
+            </div>
+
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=your-video-id-2" target="_blank">
+                    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+                    <div class="card-content">
+                        <p class="author">SHINPHAMM</p>
+                        <p class="title">
+                            <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+                        </p>
+                        <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+                    </div>
+                </a>
+                <button class="like-button">YÊU THÍCH</button>
+            </div>
+
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+
+        </section>
+
+        <section class="trainer-section">
+        <h2>GIẢNG VIÊN</h2>
+        <div class="trainer-list" id="trainerList">
+    <div class="trainer-card">
+        <a href="../teacherinfo/teacherinfo.html">
+            <div class="trainer-card-image-wrapper">
+                <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+            </div>
+            <div class="trainer-card-info">
+                <h3>ĐINH QUANG HUY</h3>
+                <p>HLV Thể hình – Fitness Sơ Cấp</p>
+                <p>Level 1 Health and Fitness Assistant</p>
+                <p>Level 2 Fitness Instructor</p>
+            </div>
+        </a>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+    <div class="trainer-card">
+        <div class="trainer-card-image-wrapper">
+            <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+        </div>
+        <div class="trainer-card-info">
+            <h3>ĐINH QUANG HUY</h3>
+            <p>HLV Thể hình – Fitness Sơ Cấp</p>
+            <p>Level 1 Health and Fitness Assistant</p>
+            <p>Level 2 Fitness Instructor</p>
+        </div>
+    </div>
+</div>
+<div class="trainer-pagination" id="trainerPagination"></div>
+</section>
+
+        
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
+    </div>
+    <nav class="footer-links">
+      <a href="../index.html">Trang Chủ</a>
+      <a href="../Video/Video.html">Video
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="../Giangvien/Giangvien.html">Người Hướng Dẫn
+    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+      </a>
+      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
+      <a href="../about/about.html">Về GoodFit</a>
+    </nav>
+    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="#"><img src="../img/fb.png" alt="Facebook" class="social-icon-img"></a>
+      <a href="#"><img src="../img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
+      <a href="#"><img src="../img/ig.png" alt="Instagram" class="social-icon-img"></a>
+      <a href="#"><img src="../img/gg.png" alt="Google" class="social-icon-img"></a>
+    </div>
+    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
+  </div>
+</footer>
+
+  <script src="fav.js"></script>
+
+</body>

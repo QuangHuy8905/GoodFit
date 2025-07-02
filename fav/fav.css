@@ -1,0 +1,471 @@
+/* form chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 140px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  stroke: #343A40; /* màu mũi tên */
+}
+
+.login-btn {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* SemiBold */
+  font-size: 14px;
+  width: 104px;
+  height: 38px;
+  background-color: #475875;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trainer-section {
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h2 {
+  color: #4D5F81;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+h1 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 500;
+  font-size: 52px;
+  color: #4D5F81;
+  margin-bottom: 10px;
+  margin-top: 70px;
+}
+
+.sub-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #524F4F;
+  margin-bottom: 70px;
+  max-width: 700px;
+  margin: 0 auto 70px auto;
+}
+
+.search-box {
+  width: 696px;
+  height: 60px;
+  border: 2px solid #4D5F81;
+  border-radius: 12px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 0 10px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #4D5F81;
+  flex-shrink: 0;
+}
+
+/* video */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Tăng khoảng cách giữa các card */
+    max-width: 1170px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(50% - 15px); /* 2 cột, điều chỉnh gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.container .card a {
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.container .card a p,
+.container .card a strong,
+.container .card a span {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Nổi lên 5px */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+}
+
+.card-image {
+    width: 100%;
+    object-fit: cover; /* Đảm bảo ảnh cover toàn bộ không gian */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    padding: 16px;
+    padding-top: 5px; /* Tăng khoảng cách từ ảnh lên 20px */
+    text-align: left; /* Căn trái toàn bộ nội dung */
+    flex-grow: 1; /* Cho phép nội dung giãn nở */
+}
+
+.author {
+    font-weight: 400;
+    font-size: 18px; /* Giảm font-size tác giả */
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 20px; /* Điều chỉnh font-size tiêu đề */
+    font-weight: bold;
+    color: #4D5F81;
+    margin-bottom: 5px;
+    line-height: 1.3; /* Tăng line-height cho dễ đọc */
+    /* Giới hạn 2 dòng và hiện dấu ... nếu dài */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meta {
+    font-size: 16px; /* Giảm font-size meta */
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px; /* Điều chỉnh giá trị này để tăng hoặc giảm khoảng cách */
+}
+
+.like-button {
+    background-color: #4D5F81;
+    color: white;
+    border: none;
+    padding: 12px 0px; /* Điều chỉnh padding ngang để nút rộng hơn */
+    font-size: 20px; /* Giảm font size cho nút */
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: all 0.3s ease;
+    display: block;
+    width: calc(100% - 130px); /* Chiếm gần hết chiều rộng card */
+    margin: 5px auto 30px auto; /* Căn giữa và tạo khoảng cách */
+}
+
+.liked-button {
+    background-color: white;
+    color: #4D5F81; /* Chữ màu xanh */
+    border: 2px solid #4D5F81; /* Viền màu xanh */
+    padding: 12px 0px; /* Giữ padding như nút ban đầu để giữ kích thước */
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: all 0.3s ease; /* Thêm transition để hiệu ứng mượt mà */
+    display: block;
+    width: calc(100% - 130px); /* Chiếm gần hết chiều rộng card */
+    margin: 5px auto 30px auto; /* Căn giữa và tạo khoảng cách */
+}
+
+.like-button:hover, .liked-button:hover {
+    opacity: 0.9;
+}
+
+
+/* thanh phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px; /* Thêm padding dưới để phân trang không sát footer */
+}
+
+.pagination button {
+    border: none;
+    background: white;
+    border-radius: 50%;
+    width: 36px; /* Tăng kích thước nút phân trang */
+    height: 36px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #4D5F81;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-size: bold; /* Tăng font size của số trang */
+}
+
+.pagination button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.pagination button.active {
+    background-color: #4D5F81;
+    color: white;
+}
+
+.trainer-section {
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.trainer-list {
+    max-width: 1170px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 220px; /* Khoảng cách giữa các hàng (ví dụ: 40px) */
+    column-gap: 20px; /* Khoảng cách giữa các cột (ví dụ: 30px) */
+}
+
+/* proprile huấn luyện viên */
+.trainer-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative; /* Quan trọng: Để .trainer-card-image-wrapper có thể dùng position: absolute */
+    padding-top: 80px; /* Tạo khoảng trống ở trên để ảnh nổi lên. Điều chỉnh nếu ảnh lớn hơn/nhỏ hơn */
+    margin-top: 180px;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+.trainer-card-image-wrapper {
+    position: absolute; /* Đặt ảnh ở vị trí tuyệt đối */
+    top: -170px; /* Nổi lên trên 60px so với top của card. Điều chỉnh theo ý muốn */
+    left: 50%; /* Di chuyển từ trái vào 50% */
+    transform: translateX(-50%); /* Căn giữa ảnh chính xác */
+    width: 250px; /* Tăng chiều rộng của ảnh, ví dụ 200px */
+    height: 250px; /* Tăng chiều cao của ảnh, ví dụ 200px */
+    border-radius: 10px; /* Để ảnh tròn */
+    overflow: hidden; /* Cắt ảnh theo hình tròn */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Chỉnh bóng đổ rất nhẹ */
+    display: flex; /* Dùng flex để căn giữa ảnh bên trong */
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer-card-image-wrapper img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của wrapper */
+    height: 100%; /* Ảnh chiếm toàn bộ chiều cao của wrapper */
+    object-fit: cover; /* Đảm bảo ảnh được cover hoàn toàn wrapper */
+    border-radius: 10px; /* Đảm bảo ảnh cũng tròn nếu wrapper tròn */
+    background-color: transparent; /* Đảm bảo background trong suốt */
+}
+
+.trainer-card-info {
+    padding: 0 20px 40px; /* Padding cho phần thông tin (trên, trái, dưới, phải) */
+}
+
+/* Thêm đoạn CSS này vào để bỏ gạch chân cho các liên kết trong thẻ giảng viên */
+.trainer-list .trainer-card a {
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+    display: block; /* Đảm bảo thẻ <a> chiếm toàn bộ không gian của card để dễ click */
+    height: 100%; /* Đảm bảo thẻ <a> kéo dài hết chiều cao của card */
+}
+
+/* Đảm bảo các phần tử văn bản (h3, p) bên trong link cũng không có gạch chân và giữ màu gốc */
+.trainer-list .trainer-card a h3,
+.trainer-list .trainer-card a p {
+    text-decoration: none; /* Bỏ gạch chân cho tiêu đề và đoạn văn bản */
+}
+
+.trainer-card h3 {
+    color: #3f4a72;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px; /* Khoảng cách từ đầu phần info đến tên HLV */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.trainer-card p {
+    margin: 4px 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #181817;
+}
+
+/* thanh phân trang */
+.trainer-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.trainer-pagination button {
+    border: none;
+    background: white;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #4D5F81;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.trainer-pagination button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-pagination button.active {
+    background-color: #3b4b77;
+    color: white;
+}
+
+
+
+.footer {
+  background-color: #fff;
+  padding: 40px 60px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icon-img {
+    width: 20px; /* Đặt chiều rộng */
+    height: 20px; /* Đặt chiều cao */
+    object-fit: contain; /* Đảm bảo hình ảnh vừa vặn mà không bị cắt */
+    margin: 0 10px; /* Khoảng cách giữa các icon */
+    vertical-align: middle; /* Căn chỉnh với văn bản nếu có */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa các icon nếu cần */
+    gap: 15px; /* Hoặc dùng gap thay cho margin trên img */
+}
+
+.footer .copyright {
+  color: #343A40;
+  font-size: 14px;
+  font-weight: 400;
+}
