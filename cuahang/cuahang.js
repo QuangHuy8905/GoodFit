@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const pagination = document.getElementById("pagination");
 
-    const allCards = Array.from(courseList.getElementsByClassName("product-card"));
-    let filteredCards = [...allCards];
+    const cardLinks = Array.from(courseList.getElementsByClassName("card-link"));
+    let filteredLinks = [...cardLinks];
 
     const itemsPerPage = 9;
     let currentPage = 1;
@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const start = (page - 1) * itemsPerPage;
         const end = start + itemsPerPage;
 
-        allCards.forEach(card => card.style.display = "none");
+        cardLinks.forEach(link => link.classList.add("hidden"));
 
-        filteredCards.forEach((card, index) => {
+        filteredLinks.forEach((link, index) => {
             if (index >= start && index < end) {
-                card.style.display = "flex";
+                link.classList.remove("hidden");
             }
         });
     }
@@ -36,77 +36,74 @@ document.addEventListener("DOMContentLoaded", function () {
         return button;
     }
 
-function renderPagination() {
-    pagination.innerHTML = "";
-    const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
-    if (totalPages <= 1) return;
+    function renderPagination() {
+        pagination.innerHTML = "";
+        const totalPages = Math.ceil(filteredLinks.length / itemsPerPage);
+        if (totalPages <= 1) return;
 
-    const addButton = (label, page = null, isActive = false) => {
-        const btn = createButton(label, () => {
-            if (page !== null) {
-                currentPage = page;
-                showPage(currentPage);
-                renderPagination();
+        const addButton = (label, page = null, isActive = false) => {
+            const btn = createButton(label, () => {
+                if (page !== null) {
+                    currentPage = page;
+                    showPage(currentPage);
+                    renderPagination();
+                }
+            });
+            if (isActive) btn.classList.add("active");
+            pagination.appendChild(btn);
+        };
+
+        addButton("«", 1);
+        addButton("‹", currentPage > 1 ? currentPage - 1 : 1);
+
+        const delta = 1;
+        const range = [];
+        const rangeWithDots = [];
+        let l;
+
+        for (let i = 1; i <= totalPages; i++) {
+            if (
+                i === 1 ||
+                i === totalPages ||
+                (i >= currentPage - delta && i <= currentPage + delta)
+            ) {
+                range.push(i);
+            }
+        }
+
+        for (let i of range) {
+            if (l) {
+                if (i - l === 2) {
+                    rangeWithDots.push(l + 1);
+                } else if (i - l > 2) {
+                    rangeWithDots.push("...");
+                }
+            }
+            rangeWithDots.push(i);
+            l = i;
+        }
+
+        rangeWithDots.forEach(i => {
+            if (i === "...") {
+                const dot = document.createElement("button");
+                dot.textContent = "...";
+                dot.disabled = true;
+                dot.style.cursor = "default";
+                pagination.appendChild(dot);
+            } else {
+                addButton(i, i, i === currentPage);
             }
         });
-        if (isActive) btn.classList.add("active");
-        pagination.appendChild(btn);
-    };
 
-    // Nút đầu và lùi
-    addButton("«", 1);
-    addButton("‹", currentPage > 1 ? currentPage - 1 : 1);
-
-    const delta = 1;
-    const range = [];
-    const rangeWithDots = [];
-    let l;
-
-    for (let i = 1; i <= totalPages; i++) {
-        if (
-            i === 1 ||
-            i === totalPages ||
-            (i >= currentPage - delta && i <= currentPage + delta)
-        ) {
-            range.push(i);
-        }
+        addButton("›", currentPage < totalPages ? currentPage + 1 : totalPages);
+        addButton("»", totalPages);
     }
-
-    for (let i of range) {
-        if (l) {
-            if (i - l === 2) {
-                rangeWithDots.push(l + 1);
-            } else if (i - l > 2) {
-                rangeWithDots.push("...");
-            }
-        }
-        rangeWithDots.push(i);
-        l = i;
-    }
-
-    rangeWithDots.forEach(i => {
-        if (i === "...") {
-            const dot = document.createElement("button");
-            dot.textContent = "...";
-            dot.disabled = true;
-            dot.style.cursor = "default";
-            pagination.appendChild(dot);
-        } else {
-            addButton(i, i, i === currentPage);
-        }
-    });
-
-    // Nút tiến và cuối
-    addButton("›", currentPage < totalPages ? currentPage + 1 : totalPages);
-    addButton("»", totalPages);
-}
-
 
     searchInput.addEventListener("keyup", function () {
         const keyword = this.value.toLowerCase();
 
-        filteredCards = allCards.filter(card => {
-            const title = card.querySelector("h2")?.textContent.toLowerCase() || "";
+        filteredLinks = cardLinks.filter(link => {
+            const title = link.querySelector("h2")?.textContent.toLowerCase() || "";
             return title.includes(keyword);
         });
 
@@ -115,7 +112,7 @@ function renderPagination() {
         renderPagination();
     });
 
-    // Hiển thị lần đầu
+    // Khởi tạo lần đầu
     showPage(currentPage);
     renderPagination();
 });

@@ -305,3 +305,7 @@ a.card-link {
   font-size: 14px;
   font-weight: 400;
 }
+
+.hidden {
+  display: none !important;
+}
