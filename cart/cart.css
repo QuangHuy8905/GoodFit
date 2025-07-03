@@ -1,0 +1,377 @@
+/* form chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 140px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  stroke: #343A40; /* màu mũi tên */
+}
+
+.login-btn {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* SemiBold */
+  font-size: 14px;
+  width: 104px;
+  height: 38px;
+  background-color: #475875;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+
+
+
+
+h1 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 500;
+  font-size: 52px;
+  color: #4D5F81;
+  margin-bottom: 50px;
+  margin-top: 70px;
+} 
+
+.search-box {
+  width: 696px;
+  height: 60px;
+  border: 2px solid #4D5F81;
+  border-radius: 12px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 0 10px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #4D5F81;
+  flex-shrink: 0;
+}
+
+.cart-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  width: 990px;
+}
+
+.cart-item {
+  height: 191px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.cart-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ẩn checkbox mặc định */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Hình dạng bên ngoài checkbox */
+.custom-checkbox .checkmark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #4D5F81;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Hiệu ứng khi được chọn */
+.custom-checkbox input:checked + .checkmark {
+  background-color: #4D5F81;
+}
+
+/* Dấu check bên trong */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 12px;
+  top: 8px;
+  width: 10px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+
+
+.cart-item img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-info h4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 23px;
+  color: #343A40;
+  margin-top: -30px;
+  margin-bottom: 60px;
+}
+
+.cart-info .price {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 28px;
+  color: #4D5F81;
+  margin-bottom: -50px;
+  text-align: left;
+}
+
+.cart-delete {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.cart-delete svg {
+  width: 40px;
+  height: 40px;
+  stroke: #2F3C7E;
+  stroke-width: 1.5;
+}
+
+.cart-delete svg:hover {
+  stroke: #001B39;
+}
+
+.image-box {
+  width: 205px;
+  height: 191px;
+  border-radius: 12px; /* tuỳ chọn */
+  overflow: hidden;    /* đảm bảo ảnh không tràn ra ngoài */
+  background-color: #f0f0f0; /* fallback nếu ảnh chưa load */
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* hoặc 'contain' tùy ý */
+  display: block;
+}
+
+.cart-checkbox {
+  margin-left: 30px; /* nếu cần tinh chỉnh riêng */
+}
+
+
+
+
+
+
+.cart-summary {
+  width: 990px;
+  height: 191px;
+  margin: 40px auto;
+  padding: 0 40px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.summary-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 23px;
+  color: #343A40;
+  margin-left: 30px;
+}
+
+.total-price {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 28px;
+  color: #4D5F81;
+  margin-left: 30px;
+}
+
+.buy-button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 23px;
+  padding: 14px 36px;
+  background-color: #4D5F81;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+  background-color: #fff;
+  padding: 40px 60px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icon-img {
+    width: 20px; /* Đặt chiều rộng */
+    height: 20px; /* Đặt chiều cao */
+    object-fit: contain; /* Đảm bảo hình ảnh vừa vặn mà không bị cắt */
+    margin: 0 10px; /* Khoảng cách giữa các icon */
+    vertical-align: middle; /* Căn chỉnh với văn bản nếu có */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa các icon nếu cần */
+    gap: 15px; /* Hoặc dùng gap thay cho margin trên img */
+}
+
+.footer .copyright {
+  color: #343A40;
+  font-size: 14px;
+  font-weight: 400;
+}
