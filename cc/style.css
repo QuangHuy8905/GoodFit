@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #ffffff;
+  color: #2e2e2e;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 140px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #343A40;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  stroke: #343A40;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-toggle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #4D5F81;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.dropdown-panel {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #313443;
+  padding: 30px 16px 16px 30px; /* top right bottom left */
+  position: absolute;
+  right: 0;
+  top: 100%;
+  border-radius: 8px;
+  width: 234px;        /* 👈 chiều rộng cố định */
+  height: 290px;       /* 👈 chiều cao cố định */
+  min-width: 220px;
+  margin-top: 20px;
+  z-index: 99;
+}
+
+.user-menu.show .dropdown-panel {
+  display: flex;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.dropdown-item svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #7B7F92;
+}
