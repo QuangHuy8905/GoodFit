@@ -84,13 +84,13 @@ body {
 
 .intro-text {
   flex: 1;
-  max-width: 750px;  /* Thêm dòng này để giới hạn bề rộng text */
+  max-width: 850px;  /* Thêm dòng này để giới hạn bề rộng text */
   min-width: 280px;
   padding-left: 150px; /* 👉 Thêm dòng này */
 }
 
 .intro-title {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
   font-size: 40px;
   color: #4D5F81;
@@ -157,14 +157,14 @@ body {
 }
 
 .signup-form {
-  max-width: 400px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .signup-title {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
   font-weight: 400;
   font-size: 40px;
   color: #4D5F81;
@@ -218,6 +218,7 @@ body {
 }
 
 .faq-title {
+  font-family: 'IBM Plex Serif', serif;
   font-size: 40px;
   color: #4D5F81;
   font-weight: 400;
@@ -272,6 +273,7 @@ body {
 }
 
 .contact-title {
+  font-family: 'IBM Plex Serif', serif;
   font-size: 40px;
   font-weight: 400;
   color: #4D5F81;
