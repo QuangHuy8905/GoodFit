@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
 
   let filteredCards = [...cards];
-  const itemsPerPage = 6; // Số trainer trên mỗi trang
+  const itemsPerPage = 9; // Số trainer trên mỗi trang
 
   let currentPage = 1;
 

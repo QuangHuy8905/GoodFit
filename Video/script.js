@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const allCards = Array.from(courseList.getElementsByClassName("card"));
     let filteredCards = [...allCards];
 
-    const itemsPerPage = 6;
+    const itemsPerPage = 9;
     let currentPage = 1;
 
     function showPage(page) {
