@@ -15,17 +15,9 @@ $username = $_SESSION['username'] ?? null;
   <header class="navbar">
     <img src="img/logo.png" alt="GoodFit Logo" class="logo">
     <nav class="nav-links">
-      <a href="index.php">Trang Chủ</a>
-      <a href="Video/Video.html">Video
-    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-      </a>
-      <a href="Giangvien/Giangvien.html">Huấn Luyện Viên
-    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-      </a>
+      <a href="index.html">Trang Chủ</a>
+      <a href="Video/Video.html">Video</a>
+      <a href="Giangvien/Giangvien.html">Huấn Luyện Viên</a>
       <a href="cuahang/cuahang.html">Cửa Hàng</a>
       <a href="about/about.html">Về GoodFit</a>
     </nav>
@@ -187,16 +179,8 @@ $username = $_SESSION['username'] ?? null;
     </div>
     <nav class="footer-links">
       <a href="index.html">Trang Chủ</a>
-      <a href="Video/Video.html">Video
-    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-      </a>
-      <a href="Giangvien/Giangvien.html">Người Hướng Dẫn
-    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-      </a>
+      <a href="Video/Video.html">Video</a>
+      <a href="Giangvien/Giangvien.html">Người Hướng Dẫn</a>
       <a href="cuahang/cuahang.html">Cửa Hàng</a>
       <a href="about/about.html">Về GoodFit</a>
     </nav>
