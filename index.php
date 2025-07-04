@@ -23,48 +23,14 @@ $username = $_SESSION['username'] ?? null;
     </nav>
 <?php if ($username): ?>
     <div class="user-menu">
-      <div class="user-toggle">
-        <span class="user-name">HI! QUANG HUY</span>
-        <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <div class="dropdown-panel">
-
-        <div class="dropdown-item">
-          <div class="avatar"></div>
-          <span>QUANG HUY</span>
+        <button class="user-button">HI! <?php echo htmlspecialchars($username); ?></button>
+        <div class="user-dropdown">
+            <a href="#"><img class="user-icon" src="Ellipse 51.png"> <?php echo htmlspecialchars($username); ?></a>
+            <a href="#"><img class="user-icon" src="Vector 15.png"> YÊU THÍCH</a>
+            <a href="#"><img class="user-icon" src="brightness_low.png"> CÀI ĐẶT</a>
+            <a href="#"><img class="user-icon" src="local_mall.png"> GIỎ HÀNG</a>
+            <a href="logout.php"><img class="user-icon" src="input.png"> ĐĂNG XUẤT</a>
         </div>
-
-        <a href="../fav/fav.html" class="dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#7B7F92" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
-          <span>YÊU THÍCH</span>
-        </a>
-
-        <a href="../setting/setting.html" class="dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#7B7F92" d="M19.14,12.94a7.43,7.43,0,0,0,0-1.88l2.11-1.65a.5.5,0,0,0,.12-.63l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a7.31,7.31,0,0,0-1.6-.94l-.38-2.65A.5.5,0,0,0,14,3H10a.5.5,0,0,0-.5.42L9.14,6.07a7.31,7.31,0,0,0-1.6.94l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.5.5,0,0,0,.12.63L4.86,11.06a7.43,7.43,0,0,0,0,1.88L2.75,14.59a.5.5,0,0,0-.12.63l2,3.46a.5.5,0,0,0,.6.22l2.49-1a7.31,7.31,0,0,0,1.6.94l.38,2.65A.5.5,0,0,0,10,21h4a.5.5,0,0,0,.5-.42l.36-2.65a7.31,7.31,0,0,0,1.6-.94l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.5.5,0,0,0-.12-.63ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
-          </svg>
-          <span>CÀI ĐẶT</span>
-        </a>
-
-        <a href="../cart/cart.html" class="dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#7B7F92" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 13h9.79c.75 0 1.41-.41 1.75-1.03L21.89 6.5c.18-.34.11-.76-.18-1.03-.3-.28-.72-.3-1.06-.09L17.9 7H6.21L4.27 4.41c-.26-.31-.69-.38-1.04-.17-.35.2-.49.63-.32.99L5.2 12c.34.61 1 .99 1.73.99h.23z"/>
-          </svg>
-          <span>GIỎ HÀNG</span>
-        </a>
-
-        <a href="../dang-xuat.html" class="dropdown-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#7B7F92" d="M16 13v-2H7V8l-5 4 5 4v-3zM20 3h-8c-1.1 0-2 .9-2 2v4h2V5h8v14h-8v-4h-2v4c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-          </svg>
-          <span>ĐĂNG XUẤT</span>
-        </a>
-
-      </div>
     </div>
 <?php else: ?>
     <a href="login/Login.html" class="login-btn">Đăng nhập</a>
