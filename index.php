@@ -7,11 +7,15 @@
   <title>GoodFit - Thể Thao Thế Hệ Mới</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<?php
+session_start();
+$username = $_SESSION['username'] ?? null;
+?>
 <body>
   <header class="navbar">
     <img src="img/logo.png" alt="GoodFit Logo" class="logo">
     <nav class="nav-links">
-      <a href="index.html">Trang Chủ</a>
+      <a href="index.php">Trang Chủ</a>
       <a href="Video/Video.html">Video
     <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -25,7 +29,20 @@
       <a href="cuahang/cuahang.html">Cửa Hàng</a>
       <a href="about/about.html">Về GoodFit</a>
     </nav>
-    <a href="Login/Login.html" class="login-btn">Đăng Nhập</a>
+<?php if ($username): ?>
+    <div class="user-menu">
+        <button class="user-button">HI! <?php echo htmlspecialchars($username); ?></button>
+        <div class="user-dropdown">
+            <a href="#"><img class="user-icon" src="Ellipse 51.png"> <?php echo htmlspecialchars($username); ?></a>
+            <a href="#"><img class="user-icon" src="Vector 15.png"> YÊU THÍCH</a>
+            <a href="#"><img class="user-icon" src="brightness_low.png"> CÀI ĐẶT</a>
+            <a href="#"><img class="user-icon" src="local_mall.png"> GIỎ HÀNG</a>
+            <a href="logout.php"><img class="user-icon" src="input.png"> ĐĂNG XUẤT</a>
+        </div>
+    </div>
+<?php else: ?>
+    <a href="login/Login.html" class="login-btn">Đăng nhập</a>
+<?php endif; ?>
   </header>
 
 
@@ -183,7 +200,16 @@
       <a href="cuahang/cuahang.html">Cửa Hàng</a>
       <a href="about/about.html">Về GoodFit</a>
     </nav>
-    <a href="Login/Login.html" class="login-btn">Đăng Nhập</a>
+    <?php if ($username): ?>
+    <div class="user-menu">
+        <button class="user-button">HI! <?php echo htmlspecialchars($username); ?></button>
+                <div class="user-dropdown">
+            <a href="logout.php"><img class="user-icon" src="input.png"> ĐĂNG XUẤT</a>
+        </div>
+    </div>
+<?php else: ?>
+    <a href="login/Login.html" class="login-btn">Đăng nhập</a>
+<?php endif; ?>
   </div>
 
   <hr class="footer-divider" />

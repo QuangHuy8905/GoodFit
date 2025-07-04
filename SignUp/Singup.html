@@ -17,40 +17,28 @@
    <div class="logo">
   <img src="img/goodfit.png" alt="GoodFit Logo">
 </div>
-
-    <form>
-
-    <div class="input-group">
+<form action="register.php" method="post">
+  <div class="input-group">
     <label for="username">TÊN TÀI KHOẢN HOẶC EMAIL</label>
-    <input type="text" id="username" required>
+    <input type="text" id="username" name="username" required>
+  </div>
+
+  <div class="input-group password-group">
+    <label for="password">MẬT KHẨU</label>
+    <div class="password-field">
+      <input type="password" id="password" name="password" required>
     </div>
-
-
-      <!-- Mật khẩu -->
-<div class="input-group password-group">
-  <label for="password">MẬT KHẨU</label>
-  <div class="password-field">
-    <input type="password" id="password" required>
-    <span class="toggle-password" onclick="togglePassword('password', this)">
-      <ion-icon name="eye-outline"></ion-icon>
-    </span>
   </div>
-</div>
 
-<!-- Nhập lại mật khẩu -->
-<div class="input-group password-group">
-  <label for="repassword">NHẬP LẠI MẬT KHẨU</label>
-  <div class="password-field">
-    <input type="password" id="repassword" required>
-    <span class="toggle-password" onclick="togglePassword('repassword', this)">
-      <ion-icon name="eye-outline"></ion-icon>
-    </span>
+  <div class="input-group password-group">
+    <label for="repassword">NHẬP LẠI MẬT KHẨU</label>
+    <div class="password-field">
+      <input type="password" id="repassword" name="repassword" required>
+    </div>
   </div>
-</div>
 
-
-<!-- Nút đăng ký -->
-<button class="submit-btn" type="button" onclick="location.href='../LOGIN/Login.html'">ĐĂNG KÝ</button>
+  <button class="submit-btn" type="submit">ĐĂNG KÝ</button>
+</form>
 
 <!-- Dòng điều hướng dưới nút -->
 <p class="login-redirect">

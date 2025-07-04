@@ -593,4 +593,58 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
+/* menu lựa chọn */
 
+.user-menu {
+  position: relative;
+  display: inline-block;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.user-button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #4D5F81;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  background-color: transparent; /* ← làm nền trong suốt */
+  border: none;                  /* ← bỏ khung viền */
+}
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #2c2f3a;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.user-dropdown a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.user-dropdown a:hover {
+  background-color: #3a3d4d;
+}
+
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+
+.user-icon {
+  width: 18px;
+  height: 18px;
+}

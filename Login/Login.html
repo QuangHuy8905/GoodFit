@@ -2,64 +2,45 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-  <title>LOGIN</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <title>LOGIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
   <div class="background">
       <img src="img/Backdrop.png" alt="GoodFit Logo">
   </div>
   <div class="login-box">
-   <div class="logo">
-  <img src="img/goodfit.png" alt="GoodFit Logo">
-</div>
-
-
-   <button class="social-btn fb">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
-        Đăng nhập bằng Facebook
-    </button>
-
-    <button class="social-btn gg">
-        <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Logo">
-         Đăng nhập bằng Google
-    </button>
-
-
+    <div class="logo">
+        <img src="img/goodfit.png" alt="GoodFit Logo">
+    </div>
     <p class="register-text">KHÔNG CÓ TÀI KHOẢN? <a href="../SignUp/Singup.html"><u>ĐĂNG KÍ</u></a></p>
 
     <div class="or-divider">
         <span>HOẶC</span>
     </div>
 
+    <!-- FORM GỬI VỀ PHP -->
+    <form method="post" action="login.php">
+        <div class="input-group">
+            <label for="username">TÊN TÀI KHOẢN HOẶC EMAIL</label>
+            <input type="text" name="username" id="username" required>
+        </div>
 
-    <form>
+        <div class="input-group password-group">
+            <label for="password">MẬT KHẨU</label>
+            <div class="password-field">
+                <input type="password" name="password" id="password" required>
+            </div>
+        </div>
 
-    <div class="input-group">
-    <label for="username">TÊN TÀI KHOẢN HOẶC EMAIL</label>
-    <input type="text" id="username" required>
-    </div>
-
-
-      <div class="input-group password-group">
-        <label for="password">MẬT KHẨU</label>
-  <div class="password-field">
-    <input type="password" id="password" required>
-    <span class="toggle-password" onclick="togglePassword()">
-    <ion-icon id="eye-icon" name="eye-outline"></ion-icon>
-    </span>
-  </div>
-      </div>
-
-    <div class="forgot"><a href="../ForgotPassword1/ForgotPassword1.html"><u>QUÊN MẬT KHẨU?</a></div>
+        <div class="forgot"><a href="../ForgotPassword1/ForgotPassword1.html"><u>QUÊN MẬT KHẨU?</a></div>
         <button type="submit" class="login-btn" id="loginSubmitBtn">ĐĂNG NHẬP</button>
-        </form>
-    </div>
+    </form>
+  </div>
 
-  <script src="script.js"></script>
+  <!-- KHÔNG cần script xử lý chuyển trang -->
 </body>
 </html>

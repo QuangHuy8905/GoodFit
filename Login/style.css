@@ -49,36 +49,6 @@ body, html {
   font-weight: bold;
   margin-bottom: 20px;
 }
-
-.social-btn {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  background-color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 400; /* regular */
-  color: #000000;   /* màu đen */
-}
-
-.social-btn img {
-  width: 20px;
-  height: 20px;
-}
-
-.fb {
-  border-color: black;
-}
-
-.gg {
-  border-color: black;
-}
-
 .register-text {
   font-size: 13px;
   margin: 15px 0 5px;
