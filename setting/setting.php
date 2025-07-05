@@ -1,3 +1,48 @@
+<?php
+session_start();
+
+include '../connect.php';
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+if (isset($_POST['save'])) {
+    $newUsername = trim($_POST['username']);
+    $firstName = trim($_POST['first_name']);
+    $lastName = trim($_POST['last_name']);
+
+    if (isset($_SESSION['username'])) {
+        $currentUsername = $_SESSION['username'];
+
+        // Cập nhật username mới
+        $sql = "UPDATE users SET username = ? WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $newUsername, $currentUsername);
+
+        if ($stmt->execute()) {
+            $_SESSION['username'] = $newUsername; // cập nhật session
+            echo "<script>alert('Cập nhật tên người dùng thành công!');</script>";
+        } else {
+            echo "<script>alert('Lỗi khi cập nhật tên người dùng.');</script>";
+        }
+    } else {
+        echo "<script>alert('Bạn cần đăng nhập để cập nhật thông tin.'); window.location.href = 'login/Login.html';</script>";
+    }
+}
+// kiểm tra trùng
+$check = $conn->prepare("SELECT id FROM users WHERE username = ?");
+$check->bind_param("s", $newUsername);
+$check->execute();
+$check->store_result();
+
+if ($check->num_rows > 0) {
+    echo "<script>alert('Tên người dùng đã tồn tại.');</script>";
+} else {
+    // thực hiện UPDATE như trên
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -18,48 +63,19 @@
   <div class="avatar-box">
     <img src="img/sanpham2.jpg" alt="Ảnh đại diện">
   </div>
-
-  <div class="form-box">
+  <!-- form box nhập dữ liệu -->
+  <form action="setting.php" method="POST" class="form-box">
     <div class="name-row">
-      <input type="text" placeholder="Họ">
-      <input type="text" placeholder="Tên">
-    </div>
-    <input type="text" placeholder="Tên Người Dùng" class="username-input">
-    <button class="save-btn">Lưu Thông Tin Đã Chỉnh Sửa</button>
+  <input type="text" name="first_name" placeholder="Họ">
+  <input type="text" name="last_name" placeholder="Tên">
   </div>
+  <input class="username-box " type="text" name="username" placeholder="Tên Người Dùng">
+  <button class="save-button" type="submit" name="save">Lưu Thông Tin Đã Chỉnh Sửa</button>
+</form>
+
 </section>
 
-
-
-
-      <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-left">
-      <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    </div>
-    <nav class="footer-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="../Giangvien/Giangvien.html">Người Hướng Dẫn</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </div>
-
-  <hr class="footer-divider" />
-
-  <div class="footer-bottom">
-    <div class="social-icons">
-      <a href="#"><img src="../img/fb.png" alt="Facebook" class="social-icon-img"></a>
-      <a href="#"><img src="../img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
-      <a href="#"><img src="../img/ig.png" alt="Instagram" class="social-icon-img"></a>
-      <a href="#"><img src="../img/gg.png" alt="Google" class="social-icon-img"></a>
-    </div>
-    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
-  </div>
-</footer>
-
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
   <script src="setting.js"></script>
 
 </body>

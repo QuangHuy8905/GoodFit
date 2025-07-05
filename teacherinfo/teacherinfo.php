@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -5,20 +8,10 @@
   <title>Thông Tin Giảng Viên</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="teacherinfo.css">
+  <link rel="stylesheet" href="../header.css">
 </head>
 <body>
-  <header class="navbar">
-    <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    <nav class="nav-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="../Giangvien/Giangvien.html">Huấn Luyện Viên</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </header>
-
+<?php include '../header.php'; ?>
     <section class="trainer-section">
     <h5>HUẤN LUYỆN VIÊN</h5>
     <p class="sub-text">Tập luyện hiệu quả hơn khi bạn chọn đúng người dẫn dắt – người hiểu mục tiêu, truyền cảm hứng và đồng hành đúng nhịp với bạn.</p>
@@ -73,11 +66,19 @@
     </div>
     <div class="right-box">
       <h2>ĐINH QUANG HUY</h2>
-      <img src="img/anh.png" alt="Huấn luyện viên">
-      <button class="follow-button" id="followButton">THEO DÕI</button>
+      <img src="img/anh.png" alt="Huấn luyện viên"> 
+      <!-- nút theo dõi và lấy dữ liệu sang trang yêu thích -->
+<button 
+  class="follow-button"
+  id="followButton"
+  onclick="followTrainer(this)"
+  data-name="ĐINH QUANG HUY"
+  data-img="img/anh.png"    
+  data-desc='["HLV Thể hình – Fitness Sơ Cấp", "Level 1 Health and Fitness Assistant", "Level 2 Fitness Instructor"]'>
+  THEO DÕI
+</button>
     </div>
   </div>
-
     <div class="image-gallery">
     <div class="gallery-item">
       <img src="img/image 11.png" alt="Ảnh nổi bật 1">
@@ -94,8 +95,11 @@
   </div>
 
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Đánh giá trải nghiệm của bạn với huấn luyện viên này..." />
+      <input type="text" id="commentInput" placeholder="Đánh giá trải nghiệm của bạn với huấn luyện viên này..." />
     </div>
+    <div style="text-align: center; margin-top: 10px;">
+  <button id="submitComment" class="comment-button">GỬI</button>
+</div>
 
    <div class="customer-reviews-container">
     <div class="review-card">
@@ -120,35 +124,10 @@
       </div>
     </div>
   </div>
-
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-left">
-      <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    </div>
-    <nav class="footer-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="../Giangvien/Giangvien.html">Người Hướng Dẫn</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </div>
-
-  <hr class="footer-divider" />
-
-  <div class="footer-bottom">
-    <div class="social-icons">
-      <a href="#"><img src="../img/fb.png" alt="Facebook" class="social-icon-img"></a>
-      <a href="#"><img src="../img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
-      <a href="#"><img src="../img/ig.png" alt="Instagram" class="social-icon-img"></a>
-      <a href="#"><img src="../img/gg.png" alt="Google" class="social-icon-img"></a>
-    </div>
-    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
-  </div>
-</footer>
-
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
+  <script>
+  const isLoggedIn = <?= isset($_SESSION['username']) ? 'true' : 'false' ?>;
+</script>
   <script src="teacherinfo.js"></script>
 </body>
 </html>

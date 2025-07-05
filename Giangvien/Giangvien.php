@@ -31,7 +31,7 @@
 
     <div class="trainer-list" id="trainerList">
     <div class="card">
-  <a href="../teacherinfo/teacherinfo.html"> <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
+  <a href="../teacherinfo/teacherinfo.php"> <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
   </div>
   <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
     <p>Giới Tính: Nam</p>

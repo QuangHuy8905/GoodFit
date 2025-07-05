@@ -83,7 +83,6 @@ h2 {
   font-weight: 500;
   margin-bottom: 30px;
   margin-top: 10px;
-  text-align: left;
 }
 
 h1 {
@@ -152,23 +151,12 @@ h1 {
     border-radius: 16px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: calc(50% - 15px); /* 2 cột, điều chỉnh gap */
+    width: calc(30% - 15px); /* 2 cột, điều chỉnh gap */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
-.container .card a {
-    text-decoration: none; /* Bỏ gạch chân */
-}
-
-.container .card a p,
-.container .card a strong,
-.container .card a span {
-    text-decoration: none;
-}
-
 .card:hover {
     transform: translateY(-5px); /* Nổi lên 5px */
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
@@ -468,4 +456,40 @@ h1 {
   color: #343A40;
   font-size: 14px;
   font-weight: 400;
+}
+/* chức năng cuộn */
+.fav-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  text-decoration: none;}
+  /* Đảm bảo các thành phần chữ bên trong link cũng không có gạch chân và giữ nguyên màu */
+.container .card a p,
+.container .card a strong,
+.container .card a span { /* Thêm span nếu bạn có dùng trong tiêu đề/meta */
+ text-decoration: none;
+}
+
+.fav-list::-webkit-scrollbar {
+  height: 10px;
+}
+.fav-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.remove-fav {
+  margin-top: 20px;
+  background-color: #4d5f81; /* Màu xanh giống nút bạn gửi */
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px; /* Bo tròn như nút gốc */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-fav:hover {
+  background-color: #3b4a66;       /* Màu khi hover */
 }

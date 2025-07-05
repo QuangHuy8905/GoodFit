@@ -50,3 +50,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- KẾT THÚC CODE MỚI CHO ACTIVE MENU ---
 });
+/* lệnh theo dõi thì chuyển qua yêu thích và nếu không đăng nhập thì phải đăng nhập */
+// Lệnh theo dõi giảng viên
+function followTrainer(button) {
+  if (!isLoggedIn) {
+    alert("Vui lòng đăng nhập để theo dõi giảng viên.");
+    window.location.href = "../login/Login.html";
+    return;
+  }
+
+  const name = button.dataset.name;
+  const img = button.dataset.img;
+  const desc = JSON.parse(button.dataset.desc);
+
+  const trainer = { name, img, desc };
+
+  let followed = JSON.parse(localStorage.getItem("followedTrainers")) || [];
+
+  const exists = followed.some(t => t.name === name);
+  if (!exists) {
+    followed.push(trainer);
+    localStorage.setItem("followedTrainers", JSON.stringify(followed));
+    alert("Đã theo dõi giảng viên!");
+    button.textContent = "ĐÃ THEO DÕI";
+    button.classList.remove("follow-button");
+    button.classList.add("followed-button");
+  } else {
+    alert("Bạn đã theo dõi giảng viên này.");
+  }
+}
+document.getElementById("submitComment").addEventListener("click", function () {
+    const comment = document.getElementById("commentInput").value.trim();
+
+    if (comment === "") {
+      alert("Vui lòng nhập đánh giá trước khi gửi.");
+    } else {
+      alert("Cảm ơn bạn đã đánh giá huấn luyện viên!");
+      document.getElementById("commentInput").value = ""; // Xoá sau khi gửi
+    }
+  });

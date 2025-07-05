@@ -1,10 +1,10 @@
 // Lắng nghe sự kiện DOMContentLoaded để đảm bảo HTML đã được tải đầy đủ
 document.addEventListener('DOMContentLoaded', function() {
     // Lấy tham chiếu đến TẤT CẢ các nút "YÊU THÍCH" bằng class của nó
-    const likeButtons = document.querySelectorAll('.like-button'); // Đã sửa từ getElementById
+    const likeButtons = document.querySelectorAll('.like-button'); 
 
     // Lặp qua từng nút và thêm bộ lắng nghe sự kiện
-    likeButtons.forEach(button => { // Sử dụng forEach để xử lý từng nút
+    likeButtons.forEach(button => { 
         button.addEventListener('click', function() {
             // 'this' trong ngữ cảnh này sẽ tham chiếu đến nút được click
             if (this.classList.contains('liked-button')) {
@@ -111,21 +111,23 @@ document.addEventListener('DOMContentLoaded', function() {
     renderPagination();
 });
 function addToFavorites(button) {
-  const item = {
-    url: button.getAttribute("data-url"),
-    img: button.getAttribute("data-img"),
-    author: button.getAttribute("data-author"),
-    title: button.getAttribute("data-title"),
-    meta: button.getAttribute("data-meta")
+  const video = {
+    url: button.dataset.url,
+    img: button.dataset.img,
+    author: button.dataset.author,
+    title: button.dataset.title,
+    meta: button.dataset.meta
   };
 
-  let favs = JSON.parse(localStorage.getItem("favorites")) || [];
-  const exists = favs.find(v => v.url === item.url);
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  const exists = favorites.some(f => f.title === video.title);
   if (!exists) {
-    favs.push(item);
-    localStorage.setItem("favorites", JSON.stringify(favs));
-    alert("Đã thêm vào YÊU THÍCH!");
+    favorites.push(video);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    alert("Đã thêm vào danh sách yêu thích!");
+    button.textContent = "✓ ĐÃ THÊM";
   } else {
-    alert("Video này đã có trong YÊU THÍCH!");
+    alert("Video đã có trong danh sách yêu thích.");
   }
 }
