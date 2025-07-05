@@ -1,3 +1,12 @@
+<?php
+$conn = new mysqli("localhost", "root", "123456", "goodfit"); // sửa lại tên csdl nếu khác
+if ($conn->connect_error) {
+  die("Lỗi kết nối CSDL: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM sanpham";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -29,137 +38,18 @@
 
     <div class="product-grid">
 
-     <a href="../cuahang2/cuahang2.php" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
-
-     <a href="../cuahang2/cuahang2.html" class="card-link">
-      <div class="product-card">
-        <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-        <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-        <p class="price">999.000 VND</p>
-      </div>
-     </a>
+     <?php while ($row = $result->fetch_assoc()) { ?>
+  <a href="../cuahang2/cuahang2.php?id=<?php echo $row['id']; ?>" class="card-link">
+    <div class="product-card">
+      <img src="<?php echo $row['anh']; ?>" alt="<?php echo $row['ten']; ?>"  />
+      <h2><?php echo $row['ten']; ?></h2>
+      <p class="price"><?php echo number_format($row['gia'], 0, ',', '.'); ?> VND</p>
     </div>
-
+  </a>
+<?php } ?>
+     
+    </div>
    <div class="pagination" id="pagination"></div>
-
   </section>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
 

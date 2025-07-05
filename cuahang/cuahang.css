@@ -158,7 +158,6 @@ body {
   width: auto;                 /* Không chiếm toàn bộ chiều ngang */
   max-width: 100%;
   height: 274px;
-  object-fit: contain;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   display: block;

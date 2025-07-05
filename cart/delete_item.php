@@ -1,15 +1,31 @@
 <?php
-$conn = new mysqli("localhost", "root", "123456", "goodfit");
+$host = 'localhost';
+$user = 'root';
+$pass = '123456';
+$db = 'goodfit';
+
+$conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
-  die("Lỗi kết nối: " . $conn->connect_error);
+    die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $id = (int)$_POST["id"];
-  $conn->query("DELETE FROM cart_items WHERE id = $id");
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
+    $id = intval($_POST['id']);
+
+    // Xoá trạng thái giỏ hàng (in_cart = 0) thay vì xoá dữ liệu
+    $stmt = $conn->prepare("UPDATE sanpham SET in_cart = 0 WHERE id = ?");
+    $stmt->bind_param("i", $id);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Xóa sản phẩm khỏi giỏ hàng thành công'); window.location.href='cart.php';</script>";
+    } else {
+        echo "Lỗi khi xoá sản phẩm: " . $stmt->error;
+    }
+
+    $stmt->close();
+} else {
+    echo "<script>alert('Không tìm thấy sản phẩm'); window.location.href='cart.php';</script>";
 }
 
-header("Location: cart.php");
-exit;
+$conn->close();
 ?>
-

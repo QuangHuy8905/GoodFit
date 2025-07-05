@@ -4,7 +4,8 @@ if ($conn->connect_error) {
   die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-$result = $conn->query("SELECT * FROM cart_items");
+$result = $conn->query("SELECT * FROM sanpham WHERE in_cart = 1");
+
 ?>
 
 <!DOCTYPE html>
@@ -32,40 +33,40 @@ $result = $conn->query("SELECT * FROM cart_items");
     </div>
 
     <?php while ($row = $result->fetch_assoc()): ?>
-    <div class="cart-item">
-      <div class="cart-left">
-        <div class="cart-checkbox">
-          <label class="custom-checkbox">
-            <input type="checkbox" class="item-checkbox" data-price="<?= $row['product_price'] ?>" checked />
-            <span class="checkmark"></span>
-          </label>
-        </div>
-
-        <div class="image-box">
-          <img src="img/sanpham2.jpg" alt="Sản phẩm">
-        </div>
-
-        <div class="cart-info">
-          <h4><?= htmlspecialchars($row['product_name']) ?></h4>
-          <div class="price"><?= number_format($row['product_price'], 0, ',', '.') ?> VND</div>
-          <span class="price-number"><?= $row['product_price'] ?></span>
-        </div>
+  <div class="cart-item">
+    <div class="cart-left">
+      <div class="cart-checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" class="item-checkbox" data-price="<?= $row['gia'] ?>" checked />
+          <span class="checkmark"></span>
+        </label>
       </div>
 
-      <form method="POST" action="delete_item.php">
-        <input type="hidden" name="id" value="<?= $row['id'] ?>">
-        <button type="submit" class="cart-delete" aria-label="Xoá">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4D5F81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 6h18" />
-            <path d="M8 6V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1" />
-            <path d="M19 6l-1.5 12a2 2 0 0 1-2 2H8.5a2 2 0 0 1-2-2L5 6" />
-            <line x1="10" y1="11" x2="10" y2="17" />
-            <line x1="14" y1="11" x2="14" y2="17" />
-          </svg>
-        </button>
-      </form>
+      <div class="image-box">
+        <img src="<?= htmlspecialchars($row['anh']) ?>" alt="Sản phẩm" width="100">
+      </div>
+
+      <div class="cart-info">
+        <h4><?= htmlspecialchars($row['ten']) ?></h4>
+        <div class="price"><?= number_format($row['gia'], 0, ',', '.') ?>đ</div>
+      </div>
     </div>
-    <?php endwhile; ?>
+
+    <form method="POST" action="delete_item.php" class="delete-form">
+      <input type="hidden" name="id" value="<?= $row['id'] ?>">
+      <button type="submit" class="cart-delete" aria-label="Xoá">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4D5F81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18" />
+          <path d="M8 6V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1" />
+          <path d="M19 6l-1.5 12a2 2 0 0 1-2 2H8.5a2 2 0 0 1-2-2L5 6" />
+          <line x1="10" y1="11" x2="10" y2="17" />
+          <line x1="14" y1="11" x2="14" y2="17" />
+        </svg>
+      </button>
+    </form>
+  </div>
+<?php endwhile; ?>
+
   </section>
 
   <section class="cart-summary">
