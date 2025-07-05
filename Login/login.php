@@ -2,10 +2,7 @@
 session_start();
 
 // Kết nối CSDL
-$conn = mysqli_connect('localhost', 'root', '123456', 'goodfit'); // ← thay bằng tên CSDL của bạn
-if (!$conn) {
-    die('Kết nối thất bại: ' . mysqli_connect_error());
-}
+include '../connect.php';
 
 // Lấy và làm sạch dữ liệu
 $username = trim(mysqli_real_escape_string($conn, $_POST['username']));

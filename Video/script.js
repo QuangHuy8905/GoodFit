@@ -110,3 +110,22 @@ document.addEventListener('DOMContentLoaded', function() {
     showPage(currentPage);
     renderPagination();
 });
+function addToFavorites(button) {
+  const item = {
+    url: button.getAttribute("data-url"),
+    img: button.getAttribute("data-img"),
+    author: button.getAttribute("data-author"),
+    title: button.getAttribute("data-title"),
+    meta: button.getAttribute("data-meta")
+  };
+
+  let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+  const exists = favs.find(v => v.url === item.url);
+  if (!exists) {
+    favs.push(item);
+    localStorage.setItem("favorites", JSON.stringify(favs));
+    alert("Đã thêm vào YÊU THÍCH!");
+  } else {
+    alert("Video này đã có trong YÊU THÍCH!");
+  }
+}

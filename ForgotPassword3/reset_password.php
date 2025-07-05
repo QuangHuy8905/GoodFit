@@ -1,10 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "123456", "goodfit");
-
-if (!$conn) {
-    die("Kết nối thất bại");
-}
+include '../connect.php';
 
 $password = $_POST['password'];
 $repassword = $_POST['repassword'];

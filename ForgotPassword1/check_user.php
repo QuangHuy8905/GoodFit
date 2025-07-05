@@ -1,10 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "123456", "goodfit");
-
-if (!$conn) {
-    die("Kết nối thất bại");
-}
+include '../connect.php';
 
 $username = trim($_POST['username']);
 $username = mysqli_real_escape_string($conn, $username);

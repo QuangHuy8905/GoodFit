@@ -1,9 +1,6 @@
 <?php
 // Kết nối CSDL
-$conn = new mysqli("localhost", "root", "123456", "goodfit");
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+include '../connect.php';
 
 // Lấy dữ liệu từ form
 $username = $_POST["username"];

@@ -18,8 +18,8 @@ $username = $_SESSION['username'] ?? null;
       <button class="user-button">HI! <?= htmlspecialchars($username) ?></button>
       <div class="user-dropdown">
         <a href="#"><img class="user-icon" src="/GoodFit/img/Ellipse 51.png"> <?= htmlspecialchars($username) ?></a>
-        <a href="#"><img class="user-icon" src="/GoodFit/img/Vector 15.png"> YÊU THÍCH</a>
-        <a href="#"><img class="user-icon" src="/GoodFit/img/brightness_low.png"> CÀI ĐẶT</a>
+        <a href="/Goodfit/fav/fav.php"><img class="user-icon" src="/GoodFit/img/Vector 15.png"> YÊU THÍCH</a>
+        <a href="/Goodfit/setting/setting.php"><img class="user-icon" src="/GoodFit/img/brightness_low.png"> CÀI ĐẶT</a>
         <a href="/GoodFit/cart/cart.php"><img class="user-icon" src="/GoodFit/img/local_mall.png"> GIỎ HÀNG</a>
         <a href="/GoodFit/logout.php"><img class="user-icon" src="/GoodFit/img/input.png"> ĐĂNG XUẤT</a>
       </div>

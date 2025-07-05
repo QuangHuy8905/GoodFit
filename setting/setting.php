@@ -5,23 +5,10 @@
   <title>Thông Tin Giảng Viên</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="setting.css">
+  <link rel="stylesheet" href="../header.css">
 </head>
 <body>
-  <header class="navbar">
-    <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    <nav class="nav-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="../Giangvien/Giangvien.html">Huấn Luyện Viên</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </header>
-
-
-
-
+  <?php include '../header.php'; ?>
   <section class="setting">
     <h1>CÀI ĐẶT THÔNG TIN</h1>
   </section>

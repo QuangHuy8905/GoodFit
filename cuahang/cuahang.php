@@ -1,8 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "123456", "goodfit"); // sửa lại tên csdl nếu khác
-if ($conn->connect_error) {
-  die("Lỗi kết nối CSDL: " . $conn->connect_error);
-}
+include '../connect.php';
 
 $sql = "SELECT * FROM sanpham";
 $result = $conn->query($sql);

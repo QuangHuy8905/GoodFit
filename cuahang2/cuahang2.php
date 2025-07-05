@@ -1,8 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "123456", "goodfit");
-if ($conn->connect_error) {
-    die("Lỗi kết nối: " . $conn->connect_error);
-}
+include '../connect.php';
 
 $id = $_GET['id'] ?? 0;
 $stmt = $conn->prepare("SELECT * FROM sanpham WHERE id = ?");
@@ -48,18 +45,35 @@ $product = $result->fetch_assoc();
   <h2 class="product-title"><?php echo $product['ten']; ?></h2>
   <p class="product-price">Giá: <?php echo number_format($product['gia'], 0, ',', '.'); ?>đ</p>
 </div>
+<div class="product-buttons">
+  <!-- Form Thêm Vào Giỏ Hàng -->
+  <form method="POST" action="add_to_cart.php">
+    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+    <button type="submit" class="outline-button">Thêm Vào Giỏ Hàng</button>
+  </form>
 
-    
-    <div class="product-buttons">
-      <form method="POST" action="add_to_cart.php">
-  <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
-  <button type="submit" class="outline-button">Thêm Vào Giỏ Hàng</button>
-</form>
-<?php if (isset($_GET['added'])): ?>
-  <script>alert("Đã thêm vào giỏ hàng!");</script>
-<?php endif; ?>
-      <button class="cta-button">Mua Ngay</button>
-    </div>
+  <!-- Thông báo khi đã thêm -->
+  <?php if (isset($_GET['added'])): ?>
+    <script>alert("Đã thêm vào giỏ hàng!");</script>
+  <?php endif; ?>
+
+  <!-- Nút Mua Ngay -->
+  <?php 
+  if (session_status() === PHP_SESSION_NONE) {
+      session_start();
+  }
+
+  if (isset($_SESSION['username'])): ?>
+    <form method="POST" action="add_to_cart.php" onsubmit="window.location.href='../cart/cart.php'">
+      <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+      <input type="hidden" name="redirect_to_cart" value="1">
+      <button type="submit" class="cta-button">Mua Ngay</button>
+    </form>
+  <?php else: ?>
+    <button class="cta-button" onclick="window.location.href='../login/Login.html'">Mua Ngay</button>
+  <?php endif; ?>
+</div>
+
  </div>
 <div class="specs">
   <h2 class="specs-title">THÔNG TIN CHI TIẾT SẢN PHẨM</h2>

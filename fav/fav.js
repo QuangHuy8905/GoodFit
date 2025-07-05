@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tạo một bản sao của danh sách khóa học để lọc
     let filteredCourseCards = [...allCourseCards];
 
-    const itemsPerPage = 3; // Mỗi trang hiển thị 6 khóa học
+    const itemsPerPage = 6; // Mỗi trang hiển thị 6 khóa học
     let currentPage = 1;
 
     // Hàm hiển thị trang cụ thể
@@ -335,3 +335,33 @@ document.addEventListener("DOMContentLoaded", function () {
     showPage(currentPage);
     renderPagination();
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".container");
+  const favs = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  container.innerHTML = "";
+
+  favs.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <a href="${item.url}" target="_blank">
+        <img src="${item.img}" alt="Thumbnail" class="card-image" />
+        <div class="card-content">
+          <p class="author">${item.author}</p>
+          <p class="title"><strong>${item.title}</strong></p>
+          <p class="meta">${item.meta}</p>
+        </div>
+      </a>
+      <button class="like-button" onclick="removeFavorite('${item.url}')">BỎ YÊU THÍCH</button>
+    `;
+    container.appendChild(card);
+  });
+});
+
+function removeFavorite(url) {
+  let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+  favs = favs.filter(item => item.url !== url);
+  localStorage.setItem("favorites", JSON.stringify(favs));
+  location.reload();
+}

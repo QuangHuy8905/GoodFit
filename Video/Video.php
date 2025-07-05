@@ -40,158 +40,250 @@
       <p class="meta">11 Tr lượt xem | 5 năm trước</p>
     </div>
     </a>
-    <button class="like-button">YÊU THÍCH</button>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=JUZ_6Yh9eUw">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">NGUYEN HIEU YOGA</p>
+      <p class="title">
+        <strong>Yoga cơ bản tại nhà - Bài 1: kéo dãn</strong>
+      </p>
+      <p class="meta">29 Tr lượt xem | 9 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="NGUYEN HIEU YOGA"
+    data-title="Yoga cơ bản tại nhà - Bài 1: kéo dãn"
+    data-meta="29 Tr lượt xem | 9 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
+  </div>
+  <div class="card">
+    <a href="https://www.youtube.com/watch?v=REwT4IjE_eY&t=698s">
+    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
+    <div class="card-content">
+      <p class="author">SHINPHAMM</p>
+      <p class="title">
+        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
+      </p>
+      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
+    </div>
+    </a>
+    <button
+    class="like-button"
+    onclick="addToFavorites(this)"
+    data-url="https://www.youtube.com/watch?v=your-video-id-1"
+    data-img="img/video1.png"
+    data-author="SHINPHAMM"
+    data-title="10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM"
+    data-meta="11 Tr lượt xem | 5 năm trước"
+  >YÊU THÍCH</button>
   </div>
 
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">HALLO</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
 
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">SHINPHAMM</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
-
-  <div class="card">
-    <img src="img/video1.png" alt="Thumbnail" class="card-image" />
-    <div class="card-content">
-      <p class="author">NTN</p>
-      <p class="title">
-        <strong>10 phút TẬP BỤNG đơn giản TẠI NHÀ | AbsWorkout Routine | SHINPHAMM</strong>
-      </p>
-      <p class="meta">11 Tr lượt xem | 5 năm trước</p>
-    </div>
-    <button class="like-button">YÊU THÍCH</button>
-  </div>
+  
 </div>
  <div class="pagination" id="pagination"></div>
 </section>
