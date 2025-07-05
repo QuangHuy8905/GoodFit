@@ -16,7 +16,7 @@ session_start();
 <body>
   <?php include '../header.php'; ?>
 <section class="trainer-section">
-        <h1>VIDEO FITNESS</h1>
+        <h1>VIDEO</h1>
         <p class="sub-text">Hôm nay bạn muốn gì? Một buổi tập gym bùng nổ với tạ nặng, một buổi cardio đầy năng lượng, hay một buổi giãn cơ nhẹ nhàng để phục hồi?</p>
 
     <div class="search-box">
@@ -25,10 +25,6 @@ session_start();
           d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
       </svg>
       <input type="text" id="searchInput" placeholder="Tìm kiếm..." />
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-        d="M4 6h16M4 12h8m-8 6h16M10 6v4M16 12v4M8 18v-2" />
-      </svg>
     </div>
     
 <div class="container">

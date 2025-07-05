@@ -12,7 +12,7 @@ $username = $_SESSION['username'] ?? null;
     <nav class="footer-links">
       <a href="/GoodFit/index.php">Trang Chủ</a>
       <a href="/GoodFit/Video/Video.php">Video</a>
-      <a href="/GoodFit/Giangvien/Giangvien.php">Người Hướng Dẫn</a>
+      <a href="/GoodFit/Giangvien/Giangvien.php">Huấn Luyện Viên</a>
       <a href="/GoodFit/cuahang/cuahang.php">Cửa Hàng</a>
       <a href="/GoodFit/about/about.php">Về GoodFit</a>
     </nav>

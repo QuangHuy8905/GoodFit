@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "123456", "goodfit");
+$conn = new mysqli("localhost", "root", "", "goodfit", 3307);
 if ($conn->connect_error) {
   die("Kết nối thất bại: " . $conn->connect_error);
 }

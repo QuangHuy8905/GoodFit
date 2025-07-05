@@ -59,10 +59,6 @@ body {
   height: 50px;
 }
 
-.register-btn:hover {
-  background-color: #2c365e;
-}
-
 .hero-image img {
   max-width: 650px;
   width: 100%;
@@ -388,8 +384,9 @@ body {
   object-fit: cover;
 }
 
-.team-button button {
-  background-color: transparent; /* hoặc transparent nếu muốn nền trong suốt */
+.team-btn {
+  display: inline-block;
+  background-color: transparent;
   border: 1.5px solid #4D5F81;
   color: #4D5F81;
   padding: 8px 20px;
@@ -398,12 +395,15 @@ body {
   font-size: 14px;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.team-button button:hover {
+.team-btn:hover {
   background-color: #4D5F81;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
+
+
 
 
 
@@ -460,8 +460,4 @@ body {
   transition: background 0.3s ease;
   font-size: 16px;
   text-align: left; /* Căn lề trái toàn bộ nội dung */
-}
-
-.cta-button:hover {
-  background-color: #2c365e;
 }

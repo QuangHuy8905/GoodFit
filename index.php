@@ -33,7 +33,7 @@
     <div class="service-box join-box">
       <h3>Tham Gia Cùng<br>GoodFit Ngay</h3>
       <p>Đừng bỏ lỡ cơ hội trải nghiệm hành trình rèn luyện sức khỏe hiệu quả cùng GoodFit ngay hôm nay.</p>
-      <a href="#" class="btn-white">Bắt Đầu Ngay Hôm Nay</a>
+      <a href="Login/login.html" class="btn-white">Bắt Đầu Ngay Hôm Nay</a>
     </div>
 
     <!-- Box 2: Video -->
@@ -46,7 +46,7 @@
 
       <h4>Video</h4>
       <p>Thư viện video khổng lồ bao gồm mọi loại hình fitness và yoga từ cơ bản đến nâng cao.</p>
-      <a href="Video/Video.html" class="btn-outline">Tìm hiểu thêm</a>
+      <a href="Video/Video.php" class="btn-outline">Tìm hiểu thêm</a>
     </div>
 
     <!-- Box 3: Huấn luyện viên -->
@@ -57,7 +57,7 @@
 
       <h4>Huấn Luyện Viên</h4>
       <p>Đội ngũ huấn luyện viên chuyên nghiệp mang đến những buổi tập chất lượng và hiệu quả nhất</p>
-      <a href="Giangvien/Giangvien.html" class="btn-outline">Tìm hiểu thêm</a>
+      <a href="Giangvien/Giangvien.php" class="btn-outline">Tìm hiểu thêm</a>
     </div>
 
     <!-- Box 4: Cửa hàng -->
@@ -69,7 +69,7 @@
 
       <h4>Cửa Hàng</h4>
       <p>Bộ sưu tập sản phẩm thể thao và phụ kiện chất lượng, giúp tối ưu hiệu quả luyện tập của bạn.</p>
-      <a href="cuahang/cuahang.html" class="btn-outline">Tìm hiểu thêm</a>
+      <a href="cuahang/cuahang.php" class="btn-outline">Tìm hiểu thêm</a>
     </div>
 
   </div>
@@ -127,7 +127,7 @@
       </div>
     </div>
     <div class="team-button">
-      <button>Tìm Hiểu Thêm</button>
+  <a href="Giangvien/Giangvien.php" class="team-btn">Tìm Hiểu Thêm</a>
     </div>
   </div>
 </section>

@@ -1,10 +1,10 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$pass = '123456';
+$pass = '';
 $db = 'goodfit';
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($host, $user, $pass, $db, 3307);
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }

@@ -11,14 +11,14 @@
   <?php include '../header.php'; ?>
 
   <section class="trainer-section">
-    <h1>VIDEO YEU THICH</h1>
+    <h1>YÊU THÍCH</h1>
     <p class="sub-text">Tất cả video, huấn luyện viên của bạn đều được lưu trữ tại đây – sẵn sàng để bạn xem lại bất cứ khi nào!</p>
     <div class="fav-container">
-  <h2 style="text-align:center;">Danh sách yêu thích</h2>
+  <h2 style="text-align:center;">VIDEO YÊU THÍCH</h2>
   <div class="fav-list" id="fav-list"></div>
 </div>
 <div class="trainer-pagination" id="trainerPagination"></div>
-<h2>Các Giảng Viên Được Theo Dõi</h2>
+<h2>GIẢNG VIÊN ĐANG THEO DÕI</h2>
 <div id="trainer-fav-container" style="display: flex; overflow-x: auto; gap: 20px;"></div>
 </section>
   <?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
