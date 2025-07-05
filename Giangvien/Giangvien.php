@@ -8,19 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../header.css">
 </head>
 <body>
-  <header class="navbar">
-    <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    <nav class="nav-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="Giangvien.html">Huấn Luyện Viên</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </header>
+  <?php include '../header.php'; ?>
   <!-- thanh tìm kiếm và tiêu đề -->
     <section class="trainer-section">
     <h1>HUẤN LUYỆN VIÊN</h1>
@@ -135,31 +126,5 @@
   </section>
 
   <script src="script.js"></script>
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-left">
-      <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    </div>
-    <nav class="footer-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="Giangvien.html">Người Hướng Dẫn</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </div>
-
-  <hr class="footer-divider" />
-
-  <div class="footer-bottom">
-    <div class="social-icons">
-      <a href="#"><img src="../img/fb.png" alt="Facebook" class="social-icon-img"></a>
-      <a href="#"><img src="../img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
-      <a href="#"><img src="../img/ig.png" alt="Instagram" class="social-icon-img"></a>
-      <a href="#"><img src="../img/gg.png" alt="Google" class="social-icon-img"></a>
-    </div>
-    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
-  </div>
-</footer>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
 </body>

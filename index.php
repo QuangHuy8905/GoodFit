@@ -6,38 +6,11 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
   <title>GoodFit - Thể Thao Thế Hệ Mới</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
 </head>
-<?php
-session_start();
-$username = $_SESSION['username'] ?? null;
-?>
 <body>
-  <header class="navbar">
-    <img src="img/logo.png" alt="GoodFit Logo" class="logo">
-    <nav class="nav-links">
-      <a href="index.html">Trang Chủ</a>
-      <a href="Video/Video.html">Video</a>
-      <a href="Giangvien/Giangvien.html">Huấn Luyện Viên</a>
-      <a href="cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="about/about.html">Về GoodFit</a>
-    </nav>
-<?php if ($username): ?>
-    <div class="user-menu">
-        <button class="user-button">HI! <?php echo htmlspecialchars($username); ?></button>
-        <div class="user-dropdown">
-            <a href="#"><img class="user-icon" src="Ellipse 51.png"> <?php echo htmlspecialchars($username); ?></a>
-            <a href="#"><img class="user-icon" src="Vector 15.png"> YÊU THÍCH</a>
-            <a href="#"><img class="user-icon" src="brightness_low.png"> CÀI ĐẶT</a>
-            <a href="#"><img class="user-icon" src="local_mall.png"> GIỎ HÀNG</a>
-            <a href="logout.php"><img class="user-icon" src="input.png"> ĐĂNG XUẤT</a>
-        </div>
-    </div>
-<?php else: ?>
-    <a href="login/Login.html" class="login-btn">Đăng nhập</a>
-<?php endif; ?>
-  </header>
 
-
+<?php include 'header.php'; ?>
   <section class="hero">
     <div class="hero-content">
       <h1>THỂ THAO<br>THẾ HỆ MỚI</h1>
@@ -170,45 +143,7 @@ $username = $_SESSION['username'] ?? null;
     <a href="SignUp/Singup.html" class="cta-button">Đăng Ký Ngay Bây Giờ</a>
   </div>
 </section>
-
-
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-left">
-      <img src="img/logo.png" alt="GoodFit Logo" class="logo">
-    </div>
-    <nav class="footer-links">
-      <a href="index.html">Trang Chủ</a>
-      <a href="Video/Video.html">Video</a>
-      <a href="Giangvien/Giangvien.html">Người Hướng Dẫn</a>
-      <a href="cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="about/about.html">Về GoodFit</a>
-    </nav>
-    <?php if ($username): ?>
-    <div class="user-menu">
-        <button class="user-button">HI! <?php echo htmlspecialchars($username); ?></button>
-                <div class="user-dropdown">
-            <a href="logout.php"><img class="user-icon" src="input.png"> ĐĂNG XUẤT</a>
-        </div>
-    </div>
-<?php else: ?>
-    <a href="login/Login.html" class="login-btn">Đăng nhập</a>
-<?php endif; ?>
-  </div>
-
-  <hr class="footer-divider" />
-
-  <div class="footer-bottom">
-    <div class="social-icons">
-      <a href="#"><img src="img/fb.png" alt="Facebook" class="social-icon-img"></a>
-      <a href="#"><img src="img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
-      <a href="#"><img src="img/ig.png" alt="Instagram" class="social-icon-img"></a>
-      <a href="#"><img src="img/gg.png" alt="Google" class="social-icon-img"></a>
-    </div>
-    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
-  </div>
-</footer>
-
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
 <script src="script.js"></script>
 
 </body>

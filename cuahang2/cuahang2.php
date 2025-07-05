@@ -6,22 +6,10 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="cuahang2.css">
+  <link rel="stylesheet" href="../header.css">
 </head>
 <body>
-  <header class="navbar">
-    <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    <nav class="nav-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="../Giangvien/Giangvien.html">Huấn Luyện Viên</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </header>
-
-
-
+  <?php include '../header.php'; ?>
   <section class="store">
     <h1 class="title">CỬA HÀNG</h1>
     <p class="subtitle">
@@ -52,12 +40,16 @@
     <h2 class="product-title">Máy Chạy Bộ Dành Cho Phòng Gym<br>V9 Series Treadmill</h2>
     <p class="product-price">999.000 VND</p>
     <div class="product-buttons">
-      <button class="outline-button">Thêm Vào Giỏ Hàng</button>
+      <form method="POST" action="add_to_cart.php">
+  <input type="hidden" name="product_name" value="Máy Chạy Bộ Dành Cho Phòng Gym V9 Series Treadmill">
+  <input type="hidden" name="product_price" value="999000">
+  <input type="hidden" name="product_image" value="img/sanpham2.jpg">
+  <button type="submit" class="outline-button">Thêm Vào Giỏ Hàng</button>
+</form>
       <button class="cta-button">Mua Ngay</button>
     </div>
   </div>
 </div>
-
 
 
 <div class="specs">
@@ -101,35 +93,9 @@
     </div>
   </div>
 </section>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
 
-
-  <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-left">
-      <img src="../img/logo.png" alt="GoodFit Logo" class="logo">
-    </div>
-    <nav class="footer-links">
-      <a href="../index.html">Trang Chủ</a>
-      <a href="../Video/Video.html">Video</a>
-      <a href="../Giangvien/Giangvien.html">Người Hướng Dẫn</a>
-      <a href="../cuahang/cuahang.html">Cửa Hàng</a>
-      <a href="../about/about.html">Về GoodFit</a>
-    </nav>
-    <a href="../Login/Login.html" class="login-btn">Đăng Nhập</a>
-  </div>
-
-  <hr class="footer-divider" />
-
-  <div class="footer-bottom">
-    <div class="social-icons">
-      <a href="#"><img src="../img/fb.png" alt="Facebook" class="social-icon-img"></a>
-      <a href="#"><img src="../img/x.png" alt="X (Twitter)" class="social-icon-img"></a>
-      <a href="#"><img src="../img/ig.png" alt="Instagram" class="social-icon-img"></a>
-      <a href="#"><img src="../img/gg.png" alt="Google" class="social-icon-img"></a>
-    </div>
-    <p class="copyright">Copyright 2025 | All Rights Reserved</p>
-  </div>
-</footer>
+  
 
 <script src="cuahang2.js"></script>
 
