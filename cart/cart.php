@@ -119,20 +119,51 @@ $result = $conn->query("SELECT * FROM sanpham WHERE in_cart = 1");
     document.getElementById("formThongTin").style.display = "block";
   });
 
-  document.getElementById("btnXacNhan").addEventListener("click", function () {
-    const hoTen = document.getElementById("hoTen").value.trim();
-    const soDienThoai = document.getElementById("soDienThoai").value.trim();
-    const diaChi = document.getElementById("diaChi").value.trim();
+document.getElementById("btnXacNhan").addEventListener("click", function () {
+  const hoTen = document.getElementById("hoTen").value.trim();
+  const soDienThoai = document.getElementById("soDienThoai").value.trim();
+  const diaChi = document.getElementById("diaChi").value.trim();
 
-    if (!hoTen || !soDienThoai || !diaChi) {
-      alert("Vui lòng điền đầy đủ thông tin!");
-      return;
-    }
+  if (!hoTen || !soDienThoai || !diaChi) {
+    alert("Vui lòng điền đầy đủ thông tin!");
+    return;
+  }
 
-    // Thông báo thành công
-    alert("✅ Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại GoodFit!");
-    document.getElementById("formThongTin").style.display = "none";
+  // Tạo thông báo tùy chỉnh
+  const alertBox = document.createElement("div");
+  alertBox.className = "custom-alert";
+  alertBox.innerHTML = `
+    <div class="custom-alert-content">
+      <p>Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại GoodFit!</p>
+      <button id="btnAlertClose">OK</button>
+    </div>
+  `;
+  document.body.appendChild(alertBox);
+
+  // Ẩn form đặt hàng
+  document.getElementById("formThongTin").style.display = "none";
+
+  // Gán sự kiện cho nút OK
+  document.getElementById("btnAlertClose").addEventListener("click", function () {
+    alertBox.remove(); // Xoá hẳn phần tử khỏi DOM
   });
+});
+
   </script>
+  <?php if (isset($_GET['deleted']) && $_GET['deleted'] == 1): ?>
+<div class="custom-alert" id="customAlert">
+  <div class="custom-alert-content">
+    <p>Đã xóa sản phẩm khỏi giỏ hàng!</p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+</div>
+<script>
+  function closeCustomAlert() {
+    document.getElementById('customAlert').classList.add('hidden');
+    history.replaceState(null, '', 'cart.php'); // Xóa ?deleted=1 khỏi URL
+  }
+</script>
+<?php endif; ?>
+
 </body>
 </html>

@@ -1,3 +1,13 @@
+function showCustomAlert(message) {
+  const alertBox = document.getElementById("custom-alert");
+  alertBox.querySelector("p").textContent = message;
+  alertBox.classList.remove("hidden");
+}
+
+function closeCustomAlert() {
+  document.getElementById("custom-alert").classList.add("hidden");
+}
+
 // Lắng nghe sự kiện DOMContentLoaded để đảm bảo HTML đã được tải đầy đủ
 document.addEventListener('DOMContentLoaded', function() {
     // Lấy tham chiếu đến TẤT CẢ các nút "YÊU THÍCH" bằng class của nó
@@ -125,9 +135,9 @@ function addToFavorites(button) {
   if (!exists) {
     favorites.push(video);
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    alert("Đã thêm vào danh sách yêu thích!");
-    button.textContent = "✓ ĐÃ THÊM";
+showCustomAlert("Đã thêm vào danh sách yêu thích!");
+button.textContent = "✓ ĐÃ THÊM";
   } else {
-    alert("Video đã có trong danh sách yêu thích.");
+showCustomAlert("Video đã có trong danh sách yêu thích.");
   }
 }

@@ -53,9 +53,14 @@ $product = $result->fetch_assoc();
   </form>
 
   <!-- Thông báo khi đã thêm -->
-  <?php if (isset($_GET['added'])): ?>
-    <script>alert("Đã thêm vào giỏ hàng!");</script>
-  <?php endif; ?>
+<?php if (isset($_GET['added'])): ?>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      showCustomAlert("Đã thêm vào giỏ hàng!");
+    });
+  </script>
+<?php endif; ?>
+
 
   <!-- Nút Mua Ngay -->
   <?php 
@@ -108,5 +113,11 @@ $product = $result->fetch_assoc();
 
 <script src="cuahang2.js"></script>
 
+<div id="custom-alert" class="custom-alert hidden">
+  <div class="custom-alert-content">
+    <p>Đã thêm vào giỏ hàng!</p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+</div>
 </body>
 </html>

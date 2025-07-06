@@ -336,6 +336,13 @@ session_start();
 </section>
 <script src="script.js"></script>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
+
+<div id="custom-alert" class="custom-alert hidden">
+  <div class="custom-alert-content">
+    <p>Đã thêm vào yêu thích!</p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+</div>
 </body>
 
 </html>

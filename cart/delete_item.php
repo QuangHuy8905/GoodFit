@@ -17,7 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Xóa sản phẩm khỏi giỏ hàng thành công'); window.location.href='cart.php';</script>";
+echo "<script>
+window.location.href='cart.php?deleted=1';
+</script>";
+
     } else {
         echo "Lỗi khi xoá sản phẩm: " . $stmt->error;
     }
