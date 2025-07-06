@@ -22,10 +22,6 @@ session_start();
           d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
       </svg>
       <input type="text" id="searchInput" placeholder="Tìm kiếm..." />
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-        d="M4 6h16M4 12h8m-8 6h16M10 6v4M16 12v4M8 18v-2" />
-      </svg>
     </div>
     </section>
 
@@ -129,6 +125,14 @@ session_start();
   const isLoggedIn = <?= isset($_SESSION['username']) ? 'true' : 'false' ?>;
 </script>
   <script src="teacherinfo.js"></script>
+
+  <div id="customAlert" class="custom-alert hidden">
+  <div class="custom-alert-content">
+    <p id="alertMessage">Thông báo</p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+</div>
+
 </body>
 </html>
 

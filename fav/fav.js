@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const list = document.getElementById("fav-list");
 
   if (favorites.length === 0) {
-    list.innerHTML = "<p style='text-align:center;'>Chưa có video nào được yêu thích.</p>";
+    list.innerHTML = "<p style='text-align:center;'>Bạn chưa yêu thích bất cứ video nào.</p>";
     return;
   }
 
@@ -37,27 +37,32 @@ document.addEventListener("DOMContentLoaded", function () {
 const trainerList = JSON.parse(localStorage.getItem('followedTrainers')) || [];
 const container = document.getElementById('trainer-fav-container');
 
-trainerList.forEach((t, index) => {
-  const card = document.createElement('div');
-  card.className = 'card';
+if (trainerList.length === 0) {
+  container.innerHTML = "<p style='text-align:left; padding-left:20px;'>Bạn chưa theo dõi huấn luyện viên nào.</p>";
+} else {
+  trainerList.forEach((t, index) => {
+    const card = document.createElement('div');
+    card.className = 'card';
 
-  let descHTML = "";
-  t.desc.forEach(d => {
-    descHTML += `<p>${d}</p>`;
+    let descHTML = "";
+    t.desc.forEach(d => {
+      descHTML += `<p>${d}</p>`;
+    });
+
+    card.innerHTML = `
+      <div class="card-image-wrapper">
+        <img src="${t.img}" alt="HLV ${t.name}">
+      </div>
+      <div class="card-info">
+        <h3>${t.name}</h3>
+        ${descHTML}
+        <button class="remove-fav" onclick="removeTrainer(${index})">❌</button>
+      </div>
+    `;
+    container.appendChild(card);
   });
+}
 
-  card.innerHTML = `
-    <div class="card-image-wrapper">
-      <img src="${t.img}" alt="HLV ${t.name}">
-    </div>
-    <div class="card-info">
-      <h3>${t.name}</h3>
-      ${descHTML}
-      <button class="remove-fav" onclick="removeTrainer(${index})">❌</button>
-    </div>
-  `;
-  container.appendChild(card);
-});
 
 function removeTrainer(index) {
   const trainers = JSON.parse(localStorage.getItem('followedTrainers')) || [];

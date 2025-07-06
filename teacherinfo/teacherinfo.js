@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Lệnh theo dõi giảng viên
 function followTrainer(button) {
   if (!isLoggedIn) {
-    alert("Vui lòng đăng nhập để theo dõi giảng viên.");
-    window.location.href = "../login/Login.html";
+    showCustomAlert("Vui lòng đăng nhập để theo dõi giảng viên.");
+    setTimeout(() => window.location.href = "../login/Login.html", 1500);
     return;
   }
 
@@ -71,21 +71,33 @@ function followTrainer(button) {
   if (!exists) {
     followed.push(trainer);
     localStorage.setItem("followedTrainers", JSON.stringify(followed));
-    alert("Đã theo dõi giảng viên!");
     button.textContent = "ĐÃ THEO DÕI";
     button.classList.remove("follow-button");
     button.classList.add("followed-button");
+    showCustomAlert("Đã theo dõi giảng viên!");
   } else {
-    alert("Bạn đã theo dõi giảng viên này.");
+    showCustomAlert("Bạn đã theo dõi giảng viên này.");
   }
 }
-document.getElementById("submitComment").addEventListener("click", function () {
-    const comment = document.getElementById("commentInput").value.trim();
 
-    if (comment === "") {
-      alert("Vui lòng nhập đánh giá trước khi gửi.");
-    } else {
-      alert("Cảm ơn bạn đã đánh giá huấn luyện viên!");
-      document.getElementById("commentInput").value = ""; // Xoá sau khi gửi
-    }
-  });
+document.getElementById("submitComment").addEventListener("click", function () {
+  const comment = document.getElementById("commentInput").value.trim();
+
+  if (comment === "") {
+    showCustomAlert("Vui lòng nhập đánh giá trước khi gửi.");
+  } else {
+    showCustomAlert("Cảm ơn bạn đã đánh giá huấn luyện viên!");
+    document.getElementById("commentInput").value = "";
+  }
+});
+
+
+  function showCustomAlert(message) {
+    document.getElementById("alertMessage").textContent = message;
+    document.getElementById("customAlert").classList.remove("hidden");
+  }
+
+  function closeCustomAlert() {
+    document.getElementById("customAlert").classList.add("hidden");
+  }
+

@@ -493,3 +493,11 @@ h1 {
 .remove-fav:hover {
   background-color: #3b4a66;       /* Màu khi hover */
 }
+
+.card a {
+  text-decoration: none;
+}
+
+.card a * {
+  text-decoration: none;
+}
