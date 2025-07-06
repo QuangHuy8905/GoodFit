@@ -35,7 +35,7 @@ $result = $conn->query($sql);
       <?php if ($result->num_rows > 0): ?>
         <?php while ($row = $result->fetch_assoc()): ?>
           <div class="card">
-            <a href="../teacherinfo/teacherinfo.php">
+            <a href="../teacherinfo/teacherinfo.php?id=<?= $row['id'] ?>">
               <div class="card-image-wrapper">
                 <img src="<?= htmlspecialchars($row['anh']) ?>" alt="HLV <?= htmlspecialchars($row['ten']) ?>">
               </div>
