@@ -42,8 +42,8 @@ if (!favorites.length) {
     trainerList.forEach((t, index) => {
       const descHTML = t.desc.map(d => `<p>${d}</p>`).join("");
       container.innerHTML += `
-        <div class="card">
-          <div class="card-image-wrapper">
+    <div class="card">
+          <div class="card-image-wrapper" onclick="window.location.href='/GoodFit/teacherinfo/teacherinfo.php?id=${t.id}'" style="cursor:pointer;">
             <img src="${t.img}" alt="HLV ${t.name}">
           </div>
           <div class="card-info">

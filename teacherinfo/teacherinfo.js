@@ -62,8 +62,9 @@ function followTrainer(button) {
   const name = button.dataset.name;
   const img = button.dataset.img;
   const desc = JSON.parse(button.dataset.desc);
+  const id = button.dataset.id; // 🔴 Đây là nơi lấy ID
 
-  const trainer = { name, img, desc };
+  const trainer = { name, img, desc, id };
 
   let followed = JSON.parse(localStorage.getItem("followedTrainers")) || [];
 

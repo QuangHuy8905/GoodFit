@@ -89,6 +89,7 @@ $hlv = $result->fetch_assoc();
       onclick="followTrainer(this)"
       data-name="<?= htmlspecialchars($hlv['ten']) ?>"
       data-img="<?= htmlspecialchars($hlv['anh']) ?>"
+      data-id="<?= htmlspecialchars($hlv['id']) ?>"
       data-desc='["<?= htmlspecialchars($hlv['chuyenmon']) ?>", "Level 1 Health and Fitness Assistant", "Level 2 Fitness Instructor"]'>
       THEO DÕI
     </button>

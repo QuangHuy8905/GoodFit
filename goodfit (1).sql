@@ -129,3 +129,27 @@ ALTER TABLE `videos` MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 ALTER TABLE huanluyenvien ADD id INT AUTO_INCREMENT PRIMARY KEY FIRST;
 
 COMMIT;
+-- chi tiết hvl
+CREATE TABLE chitiethlv (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  id_hlv INT NOT NULL,
+  gioithieu TEXT,
+  bangcap TEXT,
+  noilamviec_chitiet TEXT,
+  lienhe TEXT,
+  FOREIGN KEY (id_hlv) REFERENCES huanluyenvien(id) ON DELETE CASCADE
+);
+
+INSERT INTO chitiethlv (id_hlv, gioithieu, bangcap, noilamviec_chitiet, lienhe) VALUES
+(1, 'Tôi là Đinh Quang Huy, với hơn 5 năm kinh nghiệm huấn luyện thể hình.', 'HLV Quốc Gia, Level 1 Fitness', 'Phòng Gym Bình Dương Center – Thiết bị hiện đại, môi trường chuyên nghiệp.', 'Facebook: fb.com/dqhuy | Instagram: @dqhuyfit'),
+(2, 'Võ Trung Hiếu chuyên về yoga trị liệu, hướng tới sức khỏe tinh thần.', 'Chứng chỉ Yoga Quốc tế, Đại học Thể dục Thể thao', 'Yoga House HCM – Không gian yên tĩnh và đậm chất thiền.', 'Facebook: fb.com/hieuyoga | Instagram: @hieuyoga'),
+(3, 'Cao Nguyễn – HLV Rider Fitness trẻ trung, năng động, nhiều kinh nghiệm thi đấu.', 'Bằng Rider Fitness Châu Á', 'CLB Rider Đà Nẵng – chuyên về bài tập phối hợp đạp xe, sức bền.', 'Facebook: fb.com/caonguyen | Instagram: @ridernguyen'),
+(4, 'Thuong Pham giúp bạn đạt được mục tiêu thể hình đúng khoa học.', 'Chứng chỉ PT quốc tế, Đại học TDTT', 'Gym Pro Vĩnh Long – Nơi đào tạo nhiều HLV chuyên nghiệp.', 'Facebook: fb.com/thuongpham | Instagram: @ptthuong'),
+(5, 'Đức Thành là người đồng hành tận tâm với bạn trong hành trình fitness.', 'Cử nhân Thể thao, PT chứng nhận Level 2', 'HCM Gym Pro – Tập trung rèn luyện cá nhân.', 'Facebook: fb.com/thanhgym | Instagram: @thanhfit'),
+(6, 'Nguyễn Tấn Huy giúp bạn xây dựng thể hình bền vững, khoa học.', 'PT nâng cao, chuyên về GYM tăng cơ', 'Fit Center HCM – chuyên sâu tập luyện cá nhân và nhóm nhỏ.', 'Facebook: fb.com/ntanhuy | Instagram: @ntanhuy'),
+(7, 'Anh Văn – HLV nữ chuyên luyện tập cho phụ nữ sau sinh.', 'PT cho nữ, bằng chăm sóc sức khỏe phụ nữ', 'HCM Lady Gym – môi trường tập luyện riêng tư.', 'Facebook: fb.com/anhvanpt | Instagram: @anhvangym'),
+(8, 'Dương Quốc Đẳng – người truyền cảm hứng luyện tập mỗi ngày.', 'PT quốc tế, dinh dưỡng học nâng cao', 'Team Star Gym HCM – Nơi gắn kết và đột phá.', 'Facebook: fb.com/ptdang | Instagram: @ptdangstar'),
+(9, 'Kit Hà chuyên luyện tập hồi phục chức năng, thân thiện với người mới.', 'Chứng chỉ nâng cao GYM & rehab', 'Fitness Center Quảng Ngãi – trung tâm huấn luyện chuyên biệt.', 'Facebook: fb.com/kitha | Instagram: @kitha.fit'),
+(10, 'Bùi Kim Long – hỗ trợ cá nhân hóa các giáo án tập luyện.', 'Fitness chuyên nghiệp, cử nhân Y học thể thao', 'HCM FitX – tập luyện cùng chuyên gia.', 'Facebook: fb.com/bkimlong | Instagram: @longfit'),
+(11, 'Long Trần – Gắn bó với ngành thể hình hơn 7 năm.', 'Thạc sĩ Thể thao, PT nâng cao', 'Gym Hải Phòng – nổi bật với đội ngũ giảng viên.', 'Facebook: fb.com/longtran | Instagram: @longtrainer'),
+(12, 'Trịnh Đình Nguyên – mang lại kết quả thực tế qua giáo án khoa học.', 'PT quốc tế, bằng kỹ thuật hình thể nâng cao', 'GoodBody Vũng Tàu – hàng trăm học viên tin tưởng.', 'Facebook: fb.com/nguyenpt | Instagram: @nguyen.goodfit');
