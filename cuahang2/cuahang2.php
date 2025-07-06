@@ -7,6 +7,12 @@ $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();
 $product = $result->fetch_assoc();
+
+// ✅ Thêm đoạn này
+$related_stmt = $conn->prepare("SELECT * FROM sanpham WHERE id != ? ORDER BY RAND() LIMIT 3");
+$related_stmt->bind_param("i", $id);
+$related_stmt->execute();
+$related_result = $related_stmt->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +38,6 @@ $product = $result->fetch_assoc();
           d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
       </svg>
       <input type="text" id="searchInput" placeholder="Tìm kiếm..." />
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon filter-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-        d="M4 6h16M4 12h8m-8 6h16M10 6v4M16 12v4M8 18v-2" />
-      </svg>
     </div>
     <div class="product-right">
     <div class="product-image" >
@@ -89,23 +91,16 @@ $product = $result->fetch_assoc();
 </section>
 <section class="related-section">
   <h2 class="related-title">NHỮNG SẢN PHẨM LIÊN QUAN</h2>
-  <div class="related-list">
-    <div class="product-card related-card">
-      <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-      <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-      <p class="price">999.000 VND</p>
+<div class="related-list">
+  <?php while ($item = $related_result->fetch_assoc()): ?>
+    <div class="product-card related-card" onclick="window.location.href='cuahang2.php?id=<?= $item['id'] ?>'">
+      <img src="<?= htmlspecialchars($item['anh']) ?>" alt="<?= htmlspecialchars($item['ten']) ?>" />
+      <h2><?= htmlspecialchars($item['ten']) ?></h2>
+      <p class="price"><?= number_format($item['gia'], 0, ',', '.') ?>đ</p>
     </div>
-    <div class="product-card related-card">
-      <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-      <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-      <p class="price">999.000 VND</p>
-    </div>
-    <div class="product-card related-card">
-      <img src="img/sanpham2.jpg" alt="Tạ đa năng" />
-      <h2>Bộ Tạ Tay Kết Hợp Tạ Đẩy 20Kg Đa Năng</h2>
-      <p class="price">999.000 VND</p>
-    </div>
-  </div>
+  <?php endwhile; ?>
+</div>
+
 </section>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/GoodFit/footer.php"); ?>
 
