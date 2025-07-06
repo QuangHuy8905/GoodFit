@@ -113,7 +113,7 @@ INSERT INTO `huanluyenvien` (`anh`, `ten`, `gioitinh`, `noilamviec`, `chuyenmon`
 ('img/hlv4.jpg', 'Đức Thành', 'Nam', 'HCM', 'Gymer'),
 ('img/hlv5.jpg', 'Nguyễn Tấn Huy', 'Nam', 'HCM', 'Gymer'),
 ('img/hlv6.jpg', 'Anh Van', 'Nữ', 'HCM', 'Personal Trainer'),
-('img/hlv7.jpg', 'Dương Quốc Đẳng', 'Cần Thơ', 'HCM', 'Personal Trainer'),
+('img/hlv7.jpg', 'Dương Quốc Đẳng', 'Nam', 'HCM', 'Personal Trainer'),
 ('img/hlv8.jpg', 'Kit Ha', 'Nam', 'Quãng Ngãi', 'Personal Trainer'),
 ('img/hlv9.jpg', 'Bui Kim Long', 'Nam', 'HCM', 'HLV'),
 ('img/hlv10.jpg', 'Long Tran', 'Nam', 'Hải Phòng', 'Gymer'),
