@@ -90,10 +90,42 @@ INSERT INTO `videos` (`tacgia`, `tieude`, `thumbnail`, `video_url`, `luotxem`, `
 
 
 -- --------------------------------------------------------
+-- Table structure for table `huanluyenvien`
+-- --------------------------------------------------------
+
+CREATE TABLE `huanluyenvien` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `anh` VARCHAR(255) DEFAULT NULL,
+  `ten` VARCHAR(100) NOT NULL,
+  `gioitinh` ENUM('Nam', 'Nữ') NOT NULL,
+  `noilamviec` VARCHAR(100) NOT NULL,
+  `chuyenmon` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Data for table `huanluyenvien`
+
+INSERT INTO `huanluyenvien` (`anh`, `ten`, `gioitinh`, `noilamviec`, `chuyenmon`) VALUES
+('img/hlv.png', 'Đinh Quang Huy', 'Nam', 'Bình Dương', 'HLV Fitness'),
+('img/hlv1.jpg', 'Võ Trung Hiếu', 'Nam', 'HCM', 'HLV Yoga'),
+('img/hlv2.jpg', 'Cao Nguyen', 'Nam', 'Đà Nẵng', 'Rider Fitness'),
+('img/hlv3.jpg', 'Thuong Pham', 'Nam', 'Vĩnh Long', 'Personal Trainer'),
+('img/hlv4.jpg', 'Đức Thành', 'Nam', 'HCM', 'Gymer'),
+('img/hlv5.jpg', 'Nguyễn Tấn Huy', 'Nam', 'HCM', 'Gymer'),
+('img/hlv6.jpg', 'Anh Van', 'Nữ', 'HCM', 'Personal Trainer'),
+('img/hlv7.jpg', 'Dương Quốc Đẳng', 'Cần Thơ', 'HCM', 'Personal Trainer'),
+('img/hlv8.jpg', 'Kit Ha', 'Nam', 'Quãng Ngãi', 'Personal Trainer'),
+('img/hlv9.jpg', 'Bui Kim Long', 'Nam', 'HCM', 'HLV'),
+('img/hlv10.jpg', 'Long Tran', 'Nam', 'Hải Phòng', 'Gymer'),
+('img/hlv11.jpg', 'Trịnh Đình Nguyên', 'Nam', 'Vũng Tàu', 'Personal Trainer');
+
+
+
 
 -- Set auto increment values
 ALTER TABLE `sanpham` MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 ALTER TABLE `users` MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 ALTER TABLE `videos` MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `huanluyenvien` MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 COMMIT;

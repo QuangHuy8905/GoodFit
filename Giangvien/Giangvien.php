@@ -1,3 +1,9 @@
+<?php
+include '../connect.php';
+
+$sql = "SELECT * FROM huanluyenvien";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -26,96 +32,25 @@
     </div>
 
     <div class="trainer-list" id="trainerList">
-    <div class="card">
-  <a href="../teacherinfo/teacherinfo.php"> <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>Giới Tính: Nam</p>
-    <p>Nơi Làm Việc: Đà Nẵng</p>
-    <p>Chuyên Môn: HLV Yoga</p>
-  </div>
-</a> </div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
-    <div class="card">
-  <div class="card-image-wrapper"> <img src="img/hlv.png" alt="HLV Đinh Quang Huy" />
-  </div>
-  <div class="card-info"> <h3>ĐINH QUANG HUY</h3>
-    <p>HLV Thể hình – Fitness Sơ Cấp</p>
-    <p>Level 1 Health and Fitness Assistant</p>
-    <p>Level 2 Fitness Instructor</p>
-  </div>
-</div>
+      <?php if ($result->num_rows > 0): ?>
+        <?php while ($row = $result->fetch_assoc()): ?>
+          <div class="card">
+            <a href="../teacherinfo/teacherinfo.php">
+              <div class="card-image-wrapper">
+                <img src="<?= htmlspecialchars($row['anh']) ?>" alt="HLV <?= htmlspecialchars($row['ten']) ?>">
+              </div>
+              <div class="card-info">
+                <h3><?= strtoupper(htmlspecialchars($row['ten'])) ?></h3>
+                <p>Giới Tính: <?= htmlspecialchars($row['gioitinh']) ?></p>
+                <p>Nơi Làm Việc: <?= htmlspecialchars($row['noilamviec']) ?></p>
+                <p>Chuyên Môn: <?= htmlspecialchars($row['chuyenmon']) ?></p>
+              </div>
+            </a>
+          </div>
+        <?php endwhile; ?>
+      <?php else: ?>
+        <p>Không tìm thấy huấn luyện viên nào.</p>
+      <?php endif; ?>
     </div>
            <!-- thanh phân trang -->
     <div class="pagination" id="pagination"></div>
